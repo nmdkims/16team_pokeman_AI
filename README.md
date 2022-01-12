@@ -1,3 +1,3 @@
 # 16team_pokeman_AI
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3f6936fc-6dbe-4351-abf9-a8471aa72d5e/Untitled.png)
+![image](https://user-images.githubusercontent.com/74017167/149072467-aa1b929c-4608-42ad-8d78-ec6917e124ad.png)
