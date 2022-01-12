@@ -1,6 +1,11 @@
 # 16team_pokeman_AI
 
   ![image](https://user-images.githubusercontent.com/89897944/149238371-2d2dda26-03e2-4fad-887a-f6cd4c930228.png)
+  
+  ![image](https://user-images.githubusercontent.com/89897944/149239459-a587bfc8-c214-4aed-aea2-4e5555f4f32b.png)
+  
+  https://www.figma.com/file/ETBecajxuHviwERyB96a0i?embed_host=notion&kind=&node-id=0%3A1&viewer=1
+
 
 
 ## Platforms & Languages
