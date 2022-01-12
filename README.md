@@ -1,5 +1,6 @@
 # 16team_pokeman_AI
 
+![image](https://user-images.githubusercontent.com/89897944/149238371-2d2dda26-03e2-4fad-887a-f6cd4c930228.png)
 
 ## Platforms & Languages
 <p>
