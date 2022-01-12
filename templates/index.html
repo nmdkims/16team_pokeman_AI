@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <meta name="description" content="얼굴로 보는 인공지능 포켓몬상 테스트, 나와 닮은 포켓몬상을 찾아보세요! 포켓몬상 테스트, 인공지능 테스트, 나와 닮은 포켓몬, 포켓몬 닮은꼴.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>포켓몬상 테스트</title>
+    <link href="/static/style.css" rel="stylesheet" type="text/css"/>
+
+
+    <meta name="title" content="포켓페이스 - 어울리는 포켓몬 테스트">
+    <meta name="subject" content="나와 닮은 포켓몬은?">
+    <meta name="keywords"
+          content="포켓몬상 테스트, 인공지능 포켓몬상 테스트, 얼굴상, 얼굴상 테스트, 나와 닮은 포켓몬, 포켓몬 닮은꼴, 얼굴로 보는 포켓몬상, 포켓몬얼굴, poketface,인공지능 포켓몬상, AI 얼굴상, AI 포켓몬상. ">
+    <meta name="author" content="포켓페이스">
+    <link rel="canonical" href="http://poketface.com">
+    <meta property="og:url" content="http://poketface.com">
+    <!-- 이미지 업로드 js , jQuery -->
+
+
+</head>
+
+<body>
+<script src="/static/script.js">
+</script>
+<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+
+<!-- 로딩페이지 -->
+<a href="/templates/loading.html">Go to second page!</a>
+<!-- 결과페이지 -->
+<a href="/templates/result.html">Go to third page!</a>
+
+
+<nav></nav>
+
+
+<section class="section">
+    <h1 class="title">포켓몬상 테스트</h1>
+    <h2 class="subtitle">나는 어떤 포켓몬을 닮았을까?</h2>
+
+    <!-- 아래 부분은 실제 홈페이지에서 안 보입니다. -->
+    <h2 class="sr-only">나는 어떤 동물과 닮았을까? 나의 동물상 찾기를 해보세요!</h2>
+    <h3 class="sr-only">대표 동물상 연예인 사진 데이터로 학습한 인공지능이 나의 얼굴로 동물상과 특징을 찾아드립니다.</h3>
+    <h4 class="sr-only">본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.</h4>
+    <p class="sr-only">얼굴로 보는 인공지능 포켓몬상 테스트, 나와 닮은 동물상을 찾아보세요! 대표 동물상 연예인 사진 데이터로 학습한 인공지능이 나의 얼굴로 동물상과 특징을 찾아드립니다.
+        회원가입도 필요없이
+        화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 포켓몬상 테스트 한번 해보세요! 강아지상? 고양이상? 여우상? 사슴상? 토끼상? 곰상? 공룡상? 얼굴상
+        테스트를 통해
+        나와 닮은 동물 찾기를 할 수 있습니다.</p>
+</section>
+
+
+<!-- container div -->
+<div class="mt-3 container file-upload">
+    <!-- 이미지 업로드 공간 -->
+    <div class="image-upload-wrap content">
+        <input id="inputImage" class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*"/>
+
+        <div class="drag-text">
+            <img src="https://cdn.pixabay.com/photo/2021/08/09/13/46/pikachu-6533397__340.png" class="mt-5 pt-5 upload">
+
+            <h3 class="mb-5 pb-5 pt-4  upload-text">
+                얼굴 사진을 올려서 업로드하세요!
+            </h3>
+        </div>
+    </div>
+
+
+    <div class="add">
+        <div class="addthis_inline_share_toolbox"></div>
+    </div>
+
+    <!-- 안보이는 이미지 업로드 공간 -->
+    <div class="file-upload-content">
+        <img class="file-upload-image" id="fileName" src="#" alt="your image">
+        <div id="loading" class="animated bounce">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p class="text-center">AI가 당신의 포켓몬상을 분석중입니다.</p>
+        </div>
+        <img class="result-image" style="" src="">
+        <p class="result-message"></p>
+        <div id="label-container" class="d-flex flex-column justify-content-around"></div>
+
+
+        <div class="pt-3 image-title-wrap">
+            <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
+                <span class="try-again-text">다른 사진으로 재시도</span>
+            </button>
+        </div>
+        <center>
+            <div id="addThis" class="pt-4 addthis_inline_share_toolbox_6lz1" data-url="http://poketface.com/"
+                 data-title="포켓페이스 - 포켓몬상 테스트"
+                 data-description="얼굴로 보는 인공지능 포켓몬상 테스트, 나와 닮은 포켓몬상을 찾아보세요! 포켓몬상 테스트, 인공지능 테스트, 나와 닮은 포켓몬, 포켓몬 닮은꼴."
+                 style="clear: both;">
+                <div id="atstbx4"
+                     class="at-resp-share-element at-style-responsive addthis-smartlayers addthis-animated at4-show"
+                     aria-labelledby="at-35378a6e-25b2-42f5-aeb6-ca9f088f3f78" role="region"><span
+                        id="at-35378a6e-25b2-42f5-aeb6-ca9f088f3f78"
+                        class="at4-visually-hidden">AddThis Sharing Buttons</span>
+                    <div class="at-share-btn-elements"><a role="button" tabindex="0"
+                                                          class="at-icon-wrapper at-share-btn at-svc-kakao"
+                                                          style="background-color: rgb(250, 185, 0); border-radius: 26px;"><span
+                            class="at4-visually-hidden">Share to Kakao</span><span class="at-icon-wrapper"
+                                                                                   style="line-height: 32px; height: 32px; width: 32px;"><svg
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-kakao-5"
+                            class="at-icon at-icon-kakao"
+                            style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-kakao-5">Kakao</title><g><path
+                            d="M20.826 6h-9.652C10.524 6 10 6.51 10 7.138v9.336c0 .63.525 1.14 1.174 1.14h4.45c-.03 1.11-.507 2.318-1.196 3.39-.775 1.207-2.426 2.543-2.44 2.555-.13.12-.226.26-.23.456 0 .15.08.263.167.385l3.104 3.395s.15.154.274.183c.14.033.3.037.41-.045 5.374-4.032 6.15-9.085 6.285-11.82V7.137C22 6.508 21.475 6 20.826 6"
+                            fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="0"
+                                                                               class="at-icon-wrapper at-share-btn at-svc-lineme"
+                                                                               style="background-color: rgb(0, 185, 0); border-radius: 26px;"><span
+                            class="at4-visually-hidden">Share to LINE</span><span class="at-icon-wrapper"
+                                                                                  style="line-height: 32px; height: 32px; width: 32px;"><svg
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-lineme-6"
+                            class="at-icon at-icon-lineme" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title
+                            id="at-svg-lineme-6">LINE</title><g><path
+                            d="M27 14.927c0 1.97-.764 3.744-2.358 5.492-2.307 2.655-7.468 5.89-8.642 6.385-1.174.495-1-.315-.953-.593l.157-.94c.037-.282.075-.718-.035-.996-.125-.306-.612-.465-.97-.542-5.287-.7-9.2-4.395-9.2-8.807C5 10.005 9.935 6 16 6c6.066 0 11 4.005 11 8.927zm-13.235-2.38h-.772a.214.214 0 0 0-.214.215v4.793c0 .118.095.214.213.214h.772a.214.214 0 0 0 .214-.215v-4.793a.214.214 0 0 0-.215-.214zm5.31 0h-.77a.214.214 0 0 0-.215.215v2.848l-2.197-2.967a.235.235 0 0 0-.017-.023l-.014-.013-.003-.004c-.005-.003-.01-.006-.013-.01-.002 0-.003-.002-.005-.004l-.01-.008a.262.262 0 0 0-.018-.01c-.004 0-.006-.003-.008-.004a.605.605 0 0 0-.013-.005l-.007-.002a.106.106 0 0 0-.02-.005.098.098 0 0 0-.012-.003h-.01c-.003-.002-.006-.002-.01-.003-.004 0-.007 0-.01-.002h-.78a.214.214 0 0 0-.214.214v4.793c0 .118.095.214.214.214h.77a.214.214 0 0 0 .216-.215v-2.847l2.2 2.97c.014.022.033.04.053.053 0 .002.002.002.002.003l.014.008c0 .002.003.003.005.004l.01.005c.003 0 .007.002.01.004.003 0 .004 0 .007.002l.014.005s.002 0 .003.002a.206.206 0 0 0 .054.007h.772a.214.214 0 0 0 .214-.215v-4.793a.214.214 0 0 0-.214-.214zm-7.17 4.022H9.81V12.76a.214.214 0 0 0-.216-.214h-.77a.214.214 0 0 0-.216.214v4.793c0 .058.023.11.06.148l.003.003c.002 0 .003.002.005.003.038.036.09.06.147.06h3.083a.214.214 0 0 0 .214-.215v-.772a.214.214 0 0 0-.215-.214zm11.432-2.822a.214.214 0 0 0 .214-.214v-.77a.214.214 0 0 0-.213-.216h-3.082a.213.213 0 0 0-.15.06s0 .002-.002.003c0 .002-.003.003-.004.005a.214.214 0 0 0-.06.147v4.793c0 .057.023.11.06.148l.003.003.003.003c.04.036.09.06.148.06h3.083a.214.214 0 0 0 .214-.215v-.772a.214.214 0 0 0-.213-.214H21.24v-.812h2.097a.214.214 0 0 0 .214-.214v-.77a.214.214 0 0 0-.213-.216H21.24v-.81h2.097z"
+                            fill-rule="evenodd"></path></g></svg></span></a><a role="button" tabindex="0"
+                                                                               class="at-icon-wrapper at-share-btn at-svc-mailto"
+                                                                               style="background-color: rgb(88, 88, 88); border-radius: 26px;"><span
+                            class="at4-visually-hidden">Share to Email App</span><span class="at-icon-wrapper"
+                                                                                       style="line-height: 32px; height: 32px; width: 32px;"><svg
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-mailto-7"
+                            class="at-icon at-icon-mailto" style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title
+                            id="at-svg-mailto-7">Email App</title><g><g fill-rule="evenodd"></g><path
+                            d="M26.684 23.264H4.948v-12.88l.2-.1c.303-.202 7.046-4.73 8.152-5.435 1.41-.907 3.22-.806 4.63.1 1.308.804 8.453 5.333 8.453 5.333l.2.1.1 12.88zm-20.63-1.006H25.68v-11.27c-1.207-.806-7.044-4.53-8.252-5.133-1.107-.704-2.515-.704-3.622-.1-1.007.603-6.743 4.528-7.95 5.232.2.1.2 11.27.2 11.27z"></path><path
+                            d="M21.753 16.622H10.08a1.59 1.59 0 0 1-1.61-1.61v-3.02c0-.905.704-1.61 1.61-1.61h11.673c.906 0 1.61.705 1.61 1.61v3.02a1.59 1.59 0 0 1-1.61 1.61zM9.98 11.49c-.404 0-.605.302-.605.604v3.02c0 .4.302.603.604.603H21.65c.403 0 .604-.302.604-.604v-3.02c0-.402-.302-.603-.604-.603H9.98z"></path><path
+                            d="M25.778 21.956v-10.97l-5.837 4.53 5.838 6.44zM5.954 21.956v-10.97l5.837 4.53-5.836 6.44z"></path><path
+                            d="M25.778 22.76l-6.138-6.74h-7.548l-6.137 6.74-.806-.603 6.54-7.145h8.353l6.54 7.145-.805.604z"></path><path
+                            d="M25.945 10.334l.61.8-6.32 4.823-.61-.8zM5.902 10.386l6.326 4.814-.61.802-6.326-4.815zM15.816 17.83l.302 8.252 2.013-2.516 2.013 4.226 1.107-.503-2.113-4.227 3.22-.2-6.54-5.033z"></path></g></svg></span></a><a
+                            role="button" tabindex="0" class="at-icon-wrapper at-share-btn at-svc-compact"
+                            style="background-color: rgb(255, 101, 80); border-radius: 26px;"><span
+                            class="at4-visually-hidden">Share to 더 보기</span><span class="at-icon-wrapper"
+                                                                                  style="line-height: 32px; height: 32px; width: 32px;"><svg
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-addthis-8"
+                            class="at-icon at-icon-addthis"
+                            style="fill: rgb(255, 255, 255); width: 32px; height: 32px;"><title id="at-svg-addthis-8">AddThis</title><g><path
+                            d="M18 14V8h-4v6H8v4h6v6h4v-6h6v-4h-6z" fill-rule="evenodd"></path></g></svg></span><span
+                            class="at4-share-count-container"
+                            style="font-size: 11.4px; line-height: 32px; color: rgb(255, 255, 255);">222</span></a>
+                    </div>
+                </div>
+            </div>
+        </center>
+        <br>
+        <br>
+
+
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div>
+            <p>Team16.AKBARI</p>
+            <p>© AKBARI 2022 All Rights Reserved. </p>
+        </div>
+    </footer>
+
+
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.image-upload-wrap').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                init().then(function () {
+                    console.log("hello");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+
+        $('.image-upload-wrap').bind('dragover', function () {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function () {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script type="text/javascript">
+        let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/o9D1N5TN/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/bB3YHn5r/";
+        let model, webcam, labelContainer, maxPredictions;
+
+        async function init() {
+            if (1) {
+                URL = urlMale;
+            } else {
+                URL = urlFemale;
+            }
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+        }
+
+        async function predict() {
+            var image = document.getElementById("face-image")
+            const prediction = await model.predict(image, false);
+            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            console.log(prediction[0].className);
+            var resultTitle, resultExplain, resultCeleb;
+            if (1) {
+                switch (prediction[0].className) {
+                    case "dog":
+                        resultTitle = "귀여운 순둥이 강아지상"
+                        resultExplain = "다정다감하고 귀여운 당신은 모든 사람들에게 즐거움을 주는 호감형이다! 친절하고 활발한 성격으로 어디에서도 인기폭발이며 애교와 웃음이 많아 연인에게 특히나 사랑스럽다. 당신은 애인바라기로 애인의 관심이 부족하면 시무룩해지고 외로움을 타는 모습이 마치 강아지와 똑 닮았다!"
+                        resultCeleb = "강아지상 연예인: 강다니엘, 백현(엑소), 박보검, 송중기"
+                        break;
+                    case "cat":
+                        resultTitle = "츤데레 매력쟁이 고양이상"
+                        resultExplain = "무뚝뚝한 당신의 첫인상은 차가워 보이지만 묘한 매력을 풍겨 언제나 인기가 넘친다. 자존심이 세계 1등과 맞먹지만 관심 받는 것을 좋아하고 연인에게는 은근히 애교쟁이다. 시크한 츤데레로 연인에게 끊임없이 설렘을 안겨주는 당신은 고양이와 닮았다!"
+                        resultCeleb = "고양이상 연예인: 황민현(뉴이스트), 시우민(엑소), 강동원, 이종석, 이준기"
+                        break;
+                    case "rabbit":
+                        resultTitle = "천진난만한 매력의 토끼상"
+                        resultExplain = "천진난만하고 귀여운 당신은 주변 사람들에게 기쁨을 주는 행복바이러스다! 호기심이 많아 활발하며 귀엽고 순수한 외모로 연인의 보호본능을 자극한다. 존재 자체가 상큼한 당신은 특별한 애교 없이도 연인에게 너무나도 사랑스럽다!"
+                        resultCeleb = "토끼상 연예인: 정국(방탄소년단), 바비(아이콘), 박지훈(워너원), 수호(엑소)"
+                        break;
+                    case "dinosaur":
+                        resultTitle = "따뜻한 나쁜남자 공룡상"
+                        resultExplain = "무심한 성격에 첫인상은 나쁜 남자 같지만, 알고 보면 따뜻함이 묻어나는 당신! 시크한 매력에 선뜻 다가가지 못하지만 한번 다가가면 헤어나올 수 없는 터프한 매력을 가진 카리스마 있는 남자다."
+                        resultCeleb = "공룡상 연예인: 윤두준(하이라이트), 이민기, 김우빈, 육성재(비투비), 공유"
+                        break;
+                    case "bear":
+                        resultTitle = "포근한 매력의 곰상"
+                        resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 꼼꼼하고 섬세한 성격으로 연인을 헌신적으로 챙겨주는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
+                        resultCeleb = "곰상 연예인: 마동석, 조진웅, 조세호, 안재홍"
+                        break;
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            } else {
+                switch (prediction[0].className) {
+                    case "dog":
+                        resultTitle = "귀여운 순둥이 강아지상"
+                        resultExplain = "다정다감하고 귀여운 당신은 모든 사람들에게 즐거움을 주는 호감형이다! 상냥하고 활발한 성격으로 어디에서도 인기폭발이지만, 애교와 웃음이 많아 연인에게 특히나 사랑스럽다. 당신은 애인바라기로 애인의 관심이 부족하면 시무룩해지고 외로움을 타는 모습이 마치 강아지와 똑 닮았다!"
+                        resultCeleb = "강아지상 연예인: 박보영, 아이유, 윤승아, 민아(걸스데이), 한지민"
+                        break;
+                    case "cat":
+                        resultTitle = "츤데레 매력쟁이 고양이상"
+                        resultExplain = "도도하고 섹시한 당신은 첫인상은 차가워 보이지만 묘한 매력을 풍겨 언제나 인기가 넘친다. 자존심이 세계 1등과 맞먹지만 관심 받는 것을 좋아하고 애인에게 관심이 받고 싶을 때는 애교도 부릴 줄 아는 귀여운 매력을 가졌다. 시크한 츤데레로 연인에게 끊임없이 설렘을 안겨주는 당신은 고양이와 닮았다!"
+                        resultCeleb = "고양이상 연예인: 안소희(원더걸스), 오연서, 한예슬, 이성경, 이효리"
+                        break;
+                    case "rabbit":
+                        resultTitle = "상큼발랄한 매력의 토끼상"
+                        resultExplain = "발랄하고 귀여운 당신은 주변 사람들에게 기쁨을 주는 행복바이러스다! 호기심이 많아 활발하며 귀엽고 순수한 외모로 연인의 보호본능을 자극한다. 존재 자체가 상큼하고 깜찍한 당신은 특별한 애교 없이도 연인에게 너무나도 사랑스럽다!"
+                        resultCeleb = "토끼상 연예인: 수지, 나연(트와이스), 예린(여자친구), 한승연(카라), 문채원"
+                        break;
+                    case "deer":
+                        resultTitle = "온순하고 우아한 사슴상"
+                        resultExplain = "맑고 영롱한 분위기의 당신은 사슴처럼 차분한 성격의 소유자다. 초롱초롱한 눈망울이 당신의 가장 큰 트레이드마크며 따스하고 온순한 눈빛을 가져 사랑스러움을 항상 머금고 있다! 부끄러움이 많아 애정표현이 낯설은 당신은 연인에게조차 신비한 존재지만 따뜻한 성격으로 연인의 마음을 사로잡는 능력을 가졌다."
+                        resultCeleb = "사슴상 연예인: 윤아(소녀시대), 이연희, 고아라, 문근영, 정유미(부산행 배우)"
+                        break;
+                    case "fox":
+                        resultTitle = "섹시한 밀당고수 여우상"
+                        resultExplain = "사람을 홀리는 매력을 가진 당신은 선뜻 다가가기 힘든 섹시한 매력을 가졌다. 우아한 외모에 더해 뛰어난 센스의 성격을 가진 당신은 어딜가도 주목받는 주인공이다! 사교적인 성격을 가져 연인에게도 적극적으로 애정표현을 하지만 밀당의 고수인 당신은 연인의 혼을 쏙 빼놓는 매력쟁이다."
+                        resultCeleb = "여우상 연예인: 경리(나인뮤지스), 예지(있지), 한혜진(모델), 헤이즈, 지연(티아라)"
+                        break;
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                }
+            }
+            var title = "<div class='" + prediction[0].className + "-animal-title'>" + resultTitle + "</div>"
+            var explain = "<div class='animal-explain pt-2'>" + resultExplain + "</div>"
+            var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            $('.result-message').html(title + explain + celeb);
+            var barWidth;
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+                switch (prediction[i].className) {
+                    case "dog":
+                        labelTitle = "강아지상"
+                        break;
+                    case "cat":
+                        labelTitle = "고양이상"
+                        break;
+                    case "rabbit":
+                        labelTitle = "토끼상"
+                        break;
+                    case "dinosaur":
+                        labelTitle = "공룡상"
+                        break;
+                    case "bear":
+                        labelTitle = "곰상"
+                        break;
+                    case "deer":
+                        labelTitle = "사슴상"
+                        break;
+                    case "fox":
+                        labelTitle = "여우상"
+                        break;
+                    default:
+                        labelTitle = "알수없음"
+                }
+                var label = "<div class='animal-label d-flex align-items-center'>" + labelTitle + "</div>"
+                var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61deb55ac97a601b"></script>
+</body>
+</html>
