@@ -8,9 +8,13 @@ def main():
     return render_template("index.html")
 
 
-@app.route('/detail')
-def detail():
-    return render_template("detail.html")
+@app.route('/loading')
+def loading():
+    return render_template("loading.html")
+
+@app.route('/result')
+def result():
+    return render_template("result.html")
 
 
 if __name__ == '__main__':
