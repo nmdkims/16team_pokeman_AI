@@ -1,0 +1,632 @@
+body {
+    /* 처음 CSS 적을 때 하는 기본세팅 */
+    font-family: 'Jua', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #35465d;
+    background-color: #ffffff;
+}
+
+/* 컨테이너 부분 */
+.file-upload {
+    padding: 10% 3%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 1.5px #ffffff;
+    background-color: #ffe3e3;
+}
+
+.file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #1FB264;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #15824B;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.file-upload-btn:hover {
+    background: #ffffff;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+/* 공유버튼 */
+.add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    margin-top: 20px;
+}
+
+/* 안 보이는 이미지 업로드 공간 */
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+#loading {
+    display: none;
+}
+
+/* 이미지 업로드 input */
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* 이미지 업로드 공간 */
+.image-upload-wrap {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    object-fit: contain;
+    border-radius: 10px;
+    border: dashed 1.5px #ffffff;
+    background-color: #ffffff;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #ffffff;
+    border: 1.5px dashed #ffffff;
+}
+
+/* 다른 사진으로 재시도 */
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+/* 이미지 업로드 캐릭터 배경 */
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* 안 보이는 이미지 업로드 공간 */
+.file-upload-image {
+    max-height: 60%;
+    max-width: 60%;
+    margin: auto;
+    padding: 10px;
+}
+
+/* 다른 사진으로 재시도 */
+.try-again-btn {
+    border-radius: 40px;
+    border: solid 1.5px #35465d;
+    background-color: #35465d;
+}
+
+.try-again-text {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 4px 15px;
+}
+
+.remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+}
+
+/* 아이콘 동그랗게 만들기 */
+.at-icon-wrapper {
+    border-radius: 26px !important;
+}
+
+.navbar-light .navbar-brand {
+    line-height: 1.68;
+    text-align: center;
+    color: #ed4a60;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: #ffffff;
+}
+
+/* 업로드 창 위의 제목들*/
+.section {
+    margin-top: 50px;
+}
+
+/* 포켓몬상 테스트 */
+.title {
+    line-height: 1.67;
+    text-align: center;
+    color: #35465d;
+}
+
+/* 나는 어떤 포켓몬을 닮았을까? */
+.subtitle {
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+    .navbar-brand {
+        font-size: 2rem;
+        text-align: center;
+        color: #3a77c9;
+    }
+}
+
+.upload {
+    width: 20%;
+}
+
+/* 얼굴 사진을 올려서 업로드 하세요!*/
+.upload-text {
+    width: 58%;
+    font-size: 1.5rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #35465d;
+    margin: 0 auto;
+}
+
+/* Team16. AKBARI */
+.footer {
+    background-color: initial;
+    color: initial;
+    text-align: center;
+}
+
+.bar-container {
+    height: 2.7rem;
+}
+
+/* 피카츄 */
+.pikachu-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(200, 200, 50, 0.2);
+}
+
+.pikachu-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(250, 200, 30, 0.5);
+}
+
+/* 파이리 */
+.charmander-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(300, 150, 30, 0.3);
+}
+
+.charmander-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(300, 150, 30, 0.7);
+}
+
+/* 꼬북이 */
+.squirtle-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(27, 175, 234, 0.2);
+}
+
+.squirtle-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(27, 175, 234, 1);
+}
+
+/* 디그다 */
+.diglett-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(300, 10, 30, 0.2);
+}
+
+.diglett-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(300, 10, 30, 0.5);
+}
+
+/* 잠만보 */
+.snorlax-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(300, 10, 30, 0.2);
+}
+
+.snorlax-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(300, 10, 30, 0.5);
+}
+
+/* 가디 */
+.growlithe-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(300, 10, 30, 0.2);
+}
+
+.growlithe-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(300, 10, 30, 0.5);
+}
+
+/* 푸린 */
+.jigglypuff-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(235, 166, 190, 0.2);
+}
+
+.jigglypuff-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(235, 166, 190, 1);
+}
+
+/* 뮤 */
+.mew-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(70, 200, 20, 0.3);
+}
+
+.mew-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(70, 200, 20, 0.6);
+}
+
+/* 질퍽이 */
+.grimer-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(235, 166, 190, 0.2);
+}
+
+.grimer-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(235, 166, 190, 1);
+}
+
+/* 메타몽 */
+.ditto-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(235, 166, 190, 0.2);
+}
+
+.ditto-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(235, 166, 190, 1);
+}
+
+.percent-text {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.pocketmon-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+
+/* 안 보이는 이미지 업로드 공간*/
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 안 보이는 이미지 업로드 공간 */
+.result-message {
+    font-size: 2rem;
+}
+
+.pocketmon-explain {
+    font-size: 1.5rem;
+}
+
+/* 피카츄 */
+.pikachu-pocketmon-title {
+    color: #DAA520;
+}
+
+.pikachu-pocketmon-celeb {
+    color: #DAA520;
+    font-size: 1.2rem;
+}
+
+/* 파이리 */
+.charmander-pocketmon-title {
+    color: #D2691E;
+}
+
+.charmander-pocketmon-celeb {
+    color: #D2691E;
+    font-size: 1.2rem;
+}
+
+/* 꼬북이 */
+.squirtle-pocketmon-title {
+    color: #548dd4;
+}
+
+.squirtle-pocketmon-celeb {
+    color: #548dd4;
+    font-size: 1.2rem;
+}
+
+/* 디그다 */
+.diglett-pocketmon-title {
+    color: #FF4500;
+}
+
+.diglett-pocketmon-celeb {
+    color: #FF4500;
+    font-size: 1.2rem;
+}
+
+/* 잠만보 */
+.snorlax-pocketmon-title {
+    color: #FF4500;
+}
+
+.snorlax-pocketmon-celeb {
+    color: #FF4500;
+    font-size: 1.2rem;
+}
+
+/* 가디 */
+.growlithe-pocketmon-title {
+    color: #FF4500;
+}
+
+.growlithe-pocketmon-celeb {
+    color: #FF4500;
+    font-size: 1.2rem;
+}
+
+/* 푸린 */
+.jigglypuff-pocketmon-title {
+    color: #e56995;
+}
+
+.jigglypuff-pocketmon-celeb {
+    color: #e56995;
+    font-size: 1.2rem;
+}
+
+/* 뮤 */
+.meow-pocketmon-title {
+    color: #C0C0C0;
+}
+
+.meow-pocketmon-celeb {
+    color: #C0C0C0;
+    font-size: 1.2rem;
+}
+
+/* 질퍽이 */
+.grimer-pocketmon-title {
+    color: #46c814;
+}
+
+.grimer-pocketmon-celeb {
+    color: #46c814;
+    font-size: 1.2rem;
+}
+
+/* 메타몽 */
+.ditto-pocketmon-title {
+    color: #e56995;
+}
+
+.ditto-pocketmon-celeb {
+    color: #e56995;
+    font-size: 1.2rem;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    width: 90px;
+    height: 41px;
+    box-shadow: 0 0 0 8px #e5e9ea inset;
+    border-radius: 30px;
+    position: relative;
+}
+
+.knob {
+    position: absolute;
+    width: 41px;
+    top: 0;
+    left: 0;
+    height: 41px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #f470a7 inset;
+    background-color: #fbd4e6;
+    transition: 0.3s;
+}
+
+.knob > i {
+    position: absolute;
+    width: 4px;
+    height: 18px;
+    top: 100%;
+    background-color: #f470a7;
+    left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+    width: 6px;
+    position: absolute;
+    top: 42%;
+    content: "";
+    height: 4px;
+    background-color: #f470a7;
+}
+
+.knob > i:before {
+    left: 4px;
+}
+
+.knob > i:after {
+    left: -6px;
+}
+
+input:checked + label > .knob {
+    box-shadow: 0 0 0 8px #a1c6dd inset;
+    background-color: #e2ecf4;
+    transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+    background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+    background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+    top: 14.5px;
+    width: 12px;
+    left: -7px;
+    transform: rotate(45deg);
+}
+
+input:checked + label > .knob > i:before {
+    top: 13px;
+    width: 12px;
+    left: 0px;
+    transform: rotate(134deg);
+}
+
+.ad-banner {
+    width: 320px;
+    margin: 0 auto;
+}
+
+#retry-button {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
