@@ -34,7 +34,7 @@ $('.image-upload-wrap').bind('dragleave', function () {
 
 let URL;
 
-let pokemonModel = "https://teachablemachine.withgoogle.com/models/bB3YHn5r/";
+let pokemonModel = "https://teachablemachine.withgoogle.com/models/pfy8RXEpy/";
 let model, webcam, labelContainer, maxPredictions;
 
 async function init() {
