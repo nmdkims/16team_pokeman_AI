@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<script>
+<!-- 가운데 몬스터볼 클릭음 (피카츄) -->
+	var audio = new Audio("/static/sound/Pikachu.mp3")
+</script>
+<style>
+	html {width:100%; height:100%; margin:0; padding:0; overflow:hidden;}
+	body {background:#333;} /* 웹문서 자체 배경색 지정 */
+	.hoverbox {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:922px;height:504px;}
+	.hoverbox .screen {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;}
+	.hoverbox .screen [class*='hud'] {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0;transition:all 1s;}
+	.hoverbox .screen [class*='hud'] img {max-width:100%;}
+	.hoverbox .screen:hover [class*='hud'] {opacity:1;}
+	.hoverbox .screen .hud01 {animation:rolling01 5s linear infinite; width: 80%}
+	.hoverbox .screen .hud02 {animation:rolling02 10s infinite alternate;}
+	.hoverbox .screen .hud03 {animation:rollandscale 3s infinite;}
+	.hoverbox .screen .hud04 {}
+	.hoverbox .screen .hud05 {animation:rolling02 6s infinite alternate;}
+	.hoverbox .screen .hud06 {top:22%;}
+
+	/* rotate 속성으로 1바퀴 돌아가는 키프레임 */
+	@keyframes rolling01 {
+		0 {transform:translate(-50%,-50%) rotate(0);}
+		100% {transform:translate(-50%,-50%) rotate(360deg);}
+	}
+
+	/* rotate 속성으로 1바퀴 돌아가는데, 초반에는 빠르게 돌다가 천천히 돌아가는 키프레임 */
+	@keyframes rolling02 {
+		0 {transform:translate(-50%,-50%) rotate(0);}
+		30% {transform:translate(-50%,-50%) rotate(200deg);}
+		100% {transform:translate(-50%,-50%) rotate(360deg);}
+	}
+
+	/* rotate 속성으로 1바퀴 돌리고 중간에 크기도 변화기시키는 키프레임  scale()의 1이 기본값. 값이 1보다 작으면 크기가 작아지고 1보다 값이 크면 크기가 커짐 */
+	@keyframes rollandscale {
+		0 {transform:translate(-50%,-50%) rotate(0) scale(1);}
+		35% {transform:translate(-50%,-50%) rotate(360deg) scale(1);}
+		40% {transform:translate(-50%,-50%) rotate(360deg) scale(.5);}
+		60% {transform:translate(-50%,-50%) rotate(0deg) scale(.5);}
+		65% {transform:translate(-50%,-50%) rotate(0deg) scale(1);}
+		100% {transform:translate(-50%,-50%) rotate(360deg)  scale(1);}
+	}
+
+	#pokeball {
+		position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+		height: 100px;
+		z-index: 100;
+	}
+</style>
+<body>
+	<div class="hoverbox">
+		<div class="screen">
+			<a href="main.html"><img id="pokeball" src="/static/img/poketball.png" onmouseover="audio.play()"></a>
+			<div class="hud01"><img src="/static/img/hover01.png"></div>
+			<div class="hud02"><img src="/static/img/hover02.png"></div>
+			<div class="hud03"><img src="/static/img/hover03.png"></div>
+			<div class="hud04"><img src="/static/img/hover04.png"></div>
+			<div class="hud05"><img src="/static/img/hover05.png"></div>
+			<div class="hud06"><img src="/static/img/background-deco01.png"></div>
+		</div>
+	</div>
+</body>
+</html>

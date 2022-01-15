@@ -1,0 +1,898 @@
+/* 전체적인 폰트 설정 */
+@font-face {
+    font-family: 'Pretendo';
+    src: url("../static/font/Pretendo.ttf") format('truetype'),
+    url("../static/font/Pretendo.woff") format('woff'),
+    url("../static/font/Pretendo.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 전체적인 레이아웃 */
+/* 화면 전체 영역 */
+body {
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 2s .5s;
+    font-family: 'Pretendo';
+}
+
+/* 화면 페이드인 */
+body.reveal {
+    opacity: 1;
+    overflow-y: auto;
+}
+
+/* 화면 페이드아웃 */
+body.hidden {
+    opacity: 0;
+}
+
+/* 스위치와 여백영역 */
+.box {
+    position: relative;
+    display: block;
+    margin: 0% auto auto;
+    background: none;
+    border: none;
+    height: 800px;
+    width: 1350px;
+
+}
+
+/* 스위치 */
+.switch-container {
+    position: absolute;
+    width: 80%;
+    height: 60%;
+    background: none;
+    top: 20%;
+    left: 10%;
+}
+
+/* 왼쪽 조이콘 */
+.joy-con-left {
+    position: absolute;
+    height: 100%;
+    width: 14%;
+    background: #00c3e3;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.7s;
+}
+
+/* 왼쪽 조이콘: 마우스 올리면 위로 이동*/
+.joy-con-left:hover {
+    transition: 1s;
+    margin-top: -120px;
+}
+
+/* 오른쪽 조이콘 */
+.joy-con-right {
+    position: absolute;
+    height: 100%;
+    width: 14%;
+    right: 0%;
+    background: #ff4554;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.7s;
+    z-index: 2;
+}
+
+/* 오른쪽 조이콘: 마우스 올리면 위로 이동*/
+.joy-con-right:hover {
+    transition: 1s;
+    margin-top: -120px;
+}
+
+/* 왼쪽 조이콘: 큰 동그라미 버튼 */
+.analog-left {
+    position: absolute;
+    border-radius: 50%;
+    background: black;
+    height: 13%;
+    width: 40%;
+    top: 20%;
+    left: 25%;
+    border: solid 7px #000000;
+    background-image: linear-gradient(to right, black, rgb(59, 58, 58));
+}
+
+/* 오른쪽 조이콘: 큰 동그라미 버튼 */
+.analog-right {
+    position: absolute;
+    border-radius: 50%;
+    background: black;
+    height: 13%;
+    width: 40%;
+    top: 50%;
+    left: 25%;
+    border: solid 7px #000000;
+    background-image: linear-gradient(to right, black, rgb(59, 58, 58));
+}
+
+/* 왼쪽 조이콘: 작은 동그라미 버튼 4개 전체 (화살표) */
+.d-pad-container-left {
+    position: absolute;
+    height: 23%;
+    width: 70%;
+    left: 15%;
+    background: none;
+    top: 45%;
+}
+
+/* 오른쪽 조이콘: 작은 동그라미 버튼 4개 전체 (XYAB) */
+.d-pad-container-right {
+    position: absolute;
+    height: 23%;
+    width: 70%;
+    left: 15%;
+    background: none;
+    top: 20%;
+    color: white;
+    text-align: center;
+    font-size: 16pt;
+}
+
+/* 양쪽 작은 동그라미 버튼 4개: 위 */
+.d-pad-top {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    left: 35%;
+    top: 0%;
+    background: black;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, black, rgb(59, 58, 58));
+}
+
+/* 양쪽 작은 동그라미 버튼 4개: 아래 */
+.d-pad-bottom {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    left: 35%;
+    bottom: 0%;
+    background: black;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, black, rgb(59, 58, 58));
+}
+
+/* 양쪽 작은 동그라미 버튼 4개: 왼쪽 */
+.d-pad-left {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    left: 0%;
+    top: 35%;
+    background: black;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, black, rgb(59, 58, 58));
+}
+
+/* 양쪽 작은 동그라미 버튼 4개: 오른쪽 */
+.d-pad-right {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    right: 0%;
+    top: 35%;
+    background: black;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, black, rgb(59, 58, 58));
+}
+
+/* 왼쪽 조이콘: 흰색 화살표 (아래) */
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 9px solid white;
+    margin: 15px auto;
+}
+
+/* 왼쪽 조이콘: 흰색 화살표 (위) */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 9px solid white;
+    margin: 10px auto;
+}
+
+/* 왼쪽 조이콘: 흰색 화살표 (왼쪽) */
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 9px solid white;
+    transform: rotate(30deg);
+    margin: 12px auto;
+}
+
+/* 왼쪽 조이콘: 흰색 화살표 (오른쪽) */
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 9px solid white;
+    transform: rotate(90deg);
+    margin: 12px auto;
+}
+
+/* 왼쪽 조이콘: 제일 아래 정사각형 버튼 */
+.square-button {
+    position: absolute;
+    bottom: 15%;
+    right: 13%;
+    height: 7%;
+    width: 23%;
+    background: black;
+}
+
+/* 왼쪽 조이콘: 제일 위 둥근 사각형 버튼*/
+.ellipse-button {
+    position: absolute;
+    height: 3%;
+    width: 30%;
+    top: 8%;
+    right: 5%;
+    background: black;
+    border-radius: 50px;
+}
+
+/* 오른쪽 조이콘: 십자가 버튼 */
+.d-pad-2-container {
+    position: absolute;
+    background: none;
+    height: 8%;
+    width: 25%;
+    top: 3%;
+    left: 8%;
+}
+
+/* 오른쪽 조이콘: 십자가 버튼 (수직) */
+.d-pad-2-vertical {
+    position: absolute;
+    height: 100%;
+    background: black;
+    width: 35%;
+    left: 32.5%;
+}
+
+/* 오른쪽 조이콘: 십자가 버튼 (수평) */
+.d-pad-2-horizontal {
+    position: absolute;
+    width: 100%;
+    background: black;
+    height: 35%;
+    top: 32.5%;
+}
+
+/* 오른쪽 조이콘: 제일 밑 작은 동그라미 버튼*/
+.circle-button-right {
+    position: absolute;
+    border-radius: 50%;
+    background: black;
+    height: 3%;
+    width: 10%;
+    bottom: 18%;
+    left: 10%;
+    border: solid 5px #202226;
+}
+
+/* 스크린 (회색 테두리) */
+.screen-outer {
+    position: absolute;
+    width: 72%;
+    left: 14%;
+    background: #414548;
+    height: 100%;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.3);
+    /*z-index: -1;*/
+}
+
+/* 스크린 (검은색 테두리) */
+.screen-inner {
+    position: absolute;
+    background: black;
+    width: 93%;
+    left: 3.7%;
+    top: 5%;
+    border-radius: 10px;
+    /*background: #999999;*/
+    height: 90%;
+    z-index: 100;
+}
+
+/* 스크린 (컨텐츠) */
+.screen-content {
+    position: absolute;
+    background: #414548;
+    width: 85%;
+    height: 88%;
+    left: 7.5%;
+    top: 6%;
+    z-index: -100;
+}
+
+
+/* 여기서부터 원본 버전과 유사합니다. */
+/* 스크린 왼쪽 부분, 크기 조절 임시용 */
+.mt-3 {
+    margin: 0 !important;
+}
+
+/* 스크린 왼쪽 부분, 크기 조절 임시용 */
+.container {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+/* 스크린, 왼쪽 부분 전체 */
+.image-upload-wrap {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: -16px;
+    transition: 2s;
+    /*text-align: center;*/
+}
+
+/* 스크린, 왼쪽 부분: 마우스 올리면 흰색으로 변하는 효과 */
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #ffffff;
+    border: 1.5px dashed #ffffff;
+    transition: 1s;
+}
+
+/* 스크린, 왼쪽 부분(1): 파일 업로드 */
+.file-upload-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* 스크린, 왼쪽 부분(2): 파일 미리보기 */
+.file-upload-image {
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    /*object-fit: contain;*/
+    display: none;
+
+}
+
+/* 스크린, 왼쪽 부분(1): 피카츄 사진, Upload your photo */
+.drag-text {
+    text-align: center;
+}
+
+/* 스크린, 왼쪽 부분(1): 피카츄 사진 (크기 조절) */
+.upload {
+    width: 20%;
+}
+
+/* 스크린, 왼쪽 부분(1): Upload your photo */
+.drag-text h3 {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* 스크린, 오른쪽 부분 전체: 머신러닝 결과 */
+.file-upload-content {
+    display: none;
+    text-align: center;
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    left: 45%;
+}
+
+/* 스크린, 오른쪽 부분: 로딩중 (안 보이게) */
+#loading {
+    display: none;
+    color: white;
+    text-align: center;
+}
+
+/* 가로 600px 이하: 깜찍한 스위치가 나타납니다! */
+@media all and (max-width: 600px) {
+    .box {
+        margin-top: 100px;
+        width: 250px;
+        height: 175px;
+    }
+
+    /* 왼쪽 조이콘: 큰 동그라미 버튼 */
+    .analog-left {
+        border: solid 2px #202226;
+    }
+
+    /* 오른쪽 조이콘: 큰 동그라미 버튼 */
+    .analog-right {
+        border: solid 2px #202226;
+    }
+
+    /* 오른쪽 조이콘: 제일 작은 동그라미 버튼 */
+    .circle-button-right {
+        border: solid 2px #202226;
+    }
+
+    /* 왼쪽 조이콘 전체 */
+    .joy-con-left {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    /* 왼쪽 조이콘 전체: 마우스 올리면 이동*/
+    .joy-con-left:hover {
+        margin-top: -30px;
+    }
+
+    /* 오른쪽 조이콘 전체 */
+    .joy-con-right {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    /* 오른쪽 조이콘 전체: 마우스 올리면 이동*/
+    .joy-con-right:hover {
+        margin-top: -30px;
+    }
+
+    /* 오른쪽 조이콘: 작은 동그라미 4개 전체 (XYAB) */
+    .d-pad-container-right {
+        font-size: 0;
+    }
+
+    /* 왼쪽 조이콘: 작은 동그라미 4개 전체 (흰색 화살표) */
+    [class^="arrow-"] {
+        display: none;
+    }
+}
+
+
+/* 머신러닝 결과(1): 그래프 */
+/* 전체 결과 그래프 */
+.bar-container {
+    height: 2.7rem;
+}
+
+/* 1. 피카츄 */
+.pikachu-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(200, 200, 50, 0.2);
+}
+
+.pikachu-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(250, 200, 30, 0.5);
+}
+
+/* 2. 파이리 */
+.charmander-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(300, 150, 30, 0.3);
+}
+
+.charmander-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(300, 150, 30, 0.7);
+}
+
+/* 3. 꼬북이 */
+.squirtle-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(27, 175, 234, 0.2);
+}
+
+.squirtle-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(27, 175, 234, 1);
+}
+
+/* 4. 디그다 */
+.diglett-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(300, 10, 30, 0.2);
+}
+
+.diglett-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(300, 10, 30, 0.5);
+}
+
+/* 5. 잠만보 */
+.snorlax-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(300, 10, 30, 0.2);
+}
+
+.snorlax-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(300, 10, 30, 0.5);
+}
+
+/* 6. 가디 */
+.growlithe-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(300, 10, 30, 0.2);
+}
+
+.growlithe-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(300, 10, 30, 0.5);
+}
+
+/* 7. 푸린 */
+.jigglypuff-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(235, 166, 190, 0.2);
+}
+
+.jigglypuff-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(235, 166, 190, 1);
+}
+
+/* 8. 뮤 */
+.mew-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(70, 200, 20, 0.3);
+}
+
+.mew-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(70, 200, 20, 0.6);
+}
+
+/* 9. 질퍽이 */
+.grimer-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(235, 166, 190, 0.2);
+}
+
+.grimer-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(235, 166, 190, 1);
+}
+
+/* 10. 메타몽 */
+.ditto-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: rgba(235, 166, 190, 0.2);
+}
+
+.ditto-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgba(235, 166, 190, 1);
+}
+
+/* 결과 그래프: 몇 %인지 텍스트 */
+.percent-text {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+/* 결과 그래프: 어떤 포켓몬인지 */
+.pocketmon-label {
+    width: 20%;
+    text-align: left;
+    height: 2rem;
+}
+
+.pocketmon-explain {
+    font-size: 1.5rem;
+}
+
+/* 안 보이는 이미지 업로드 공간 */
+.result-message {
+    font-size: 2rem;
+}
+
+/* 안 보이는 이미지 업로드 공간 */
+#label-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 다른 사진으로 재시도 */
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+/* 다른 사진으로 재시도 */
+.try-again-btn {
+    border-radius: 40px;
+    border: solid 1.5px #35465d;
+    background-color: #35465d;
+}
+
+.try-again-text {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 4px 15px;
+}
+
+/* 1. 피카츄 */
+.pikachu-pocketmon-title {
+    color: #DAA520;
+}
+
+.pikachu-pocketmon-celeb {
+    color: #DAA520;
+    font-size: 1.2rem;
+}
+
+/* 2. 파이리 */
+.charmander-pocketmon-title {
+    color: #D2691E;
+}
+
+.charmander-pocketmon-celeb {
+    color: #D2691E;
+    font-size: 1.2rem;
+}
+
+/* 3. 꼬북이 */
+.squirtle-pocketmon-title {
+    color: #548dd4;
+}
+
+.squirtle-pocketmon-celeb {
+    color: #548dd4;
+    font-size: 1.2rem;
+}
+
+/* 4. 디그다 */
+.diglett-pocketmon-title {
+    color: #FF4500;
+}
+
+.diglett-pocketmon-celeb {
+    color: #FF4500;
+    font-size: 1.2rem;
+}
+
+/* 5. 잠만보 */
+.snorlax-pocketmon-title {
+    color: #FF4500;
+}
+
+.snorlax-pocketmon-celeb {
+    color: #FF4500;
+    font-size: 1.2rem;
+}
+
+/* 6. 가디 */
+.growlithe-pocketmon-title {
+    color: #FF4500;
+}
+
+.growlithe-pocketmon-celeb {
+    color: #FF4500;
+    font-size: 1.2rem;
+}
+
+/* 7. 푸린 */
+.jigglypuff-pocketmon-title {
+    color: #e56995;
+}
+
+.jigglypuff-pocketmon-celeb {
+    color: #e56995;
+    font-size: 1.2rem;
+}
+
+/* 8. 뮤 */
+.meow-pocketmon-title {
+    color: #C0C0C0;
+}
+
+.meow-pocketmon-celeb {
+    color: #C0C0C0;
+    font-size: 1.2rem;
+}
+
+/* 9. 질퍽이 */
+.grimer-pocketmon-title {
+    color: #46c814;
+}
+
+.grimer-pocketmon-celeb {
+    color: #46c814;
+    font-size: 1.2rem;
+}
+
+/* 10. 메타몽 */
+.ditto-pocketmon-title {
+    color: #e56995;
+}
+
+.ditto-pocketmon-celeb {
+    color: #e56995;
+    font-size: 1.2rem;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    width: 90px;
+    height: 41px;
+    box-shadow: 0 0 0 8px #e5e9ea inset;
+    border-radius: 30px;
+    position: relative;
+}
+
+.knob {
+    position: absolute;
+    width: 41px;
+    top: 0;
+    left: 0;
+    height: 41px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px #f470a7 inset;
+    background-color: #fbd4e6;
+    transition: 0.3s;
+}
+
+.knob > i {
+    position: absolute;
+    width: 4px;
+    height: 18px;
+    top: 100%;
+    background-color: #f470a7;
+    left: calc(50% - 2px);
+}
+
+.knob > i:before,
+.knob > i:after {
+    width: 6px;
+    position: absolute;
+    top: 42%;
+    content: "";
+    height: 4px;
+    background-color: #f470a7;
+}
+
+.knob > i:before {
+    left: 4px;
+}
+
+.knob > i:after {
+    left: -6px;
+}
+
+input:checked + label > .knob {
+    box-shadow: 0 0 0 8px #a1c6dd inset;
+    background-color: #e2ecf4;
+    transform: translateX(49px) rotate(-140deg);
+}
+
+input:checked + label > .knob > i {
+    background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after,
+input:checked + label > .knob > i:before {
+    background-color: #a1c6dd;
+}
+
+input:checked + label > .knob > i:after {
+    top: 14.5px;
+    width: 12px;
+    left: -7px;
+    transform: rotate(45deg);
+}
+
+input:checked + label > .knob > i:before {
+    top: 13px;
+    width: 12px;
+    left: 0px;
+    transform: rotate(134deg);
+}

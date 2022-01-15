@@ -1,12 +1,26 @@
 body {
     /* 처음 CSS 적을 때 하는 기본세팅 */
-    font-family: 'Jua', sans-serif;
+    /*font-family: 'Jua', sans-serif;*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #35465d;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    overflow:hidden;
+    opacity: 0;
+    transition: opacity 2s .5s;
 }
+
+
+
+/*body.reveal {*/
+/*    opacity: 1;*/
+/*    overflow-y: auto;*/
+/*}*/
+
+/*body.hidden {*/
+/*    opacity: 0;*/
+/*}*/
 
 /* 컨테이너 부분 */
 .file-upload {
@@ -44,36 +58,25 @@ body {
     transition: all .2s ease;
 }
 
-/* 공유버튼 */
-.add {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    margin-top: 20px;
-}
 
-/* 안 보이는 이미지 업로드 공간 */
-.file-upload-content {
-    display: none;
-    text-align: center;
-}
 
-#loading {
-    display: none;
-}
+/*#loading {*/
+/*    display: none;*/
+/*}*/
 
-/* 이미지 업로드 input */
-.file-upload-input {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    opacity: 0;
-    cursor: pointer;
-}
+
+/*!* 이미지 업로드 input *!*/
+/*.file-upload-input {*/
+/*    position: relative;*/
+/*    top: -50px;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*    background: #bdae58;*/
+/*    width: 225px;*/
+/*    height: 205px;*/
+/*    opacity: 0;*/
+/*    cursor: pointer;*/
+/*}*/
 
 /* 이미지 업로드 공간 */
 .image-upload-wrap {
@@ -86,50 +89,50 @@ body {
     background-color: #ffffff;
 }
 
-.image-dropping,
-.image-upload-wrap:hover {
-    background-color: #ffffff;
-    border: 1.5px dashed #ffffff;
-}
+/*.image-dropping,*/
+/*.image-upload-wrap:hover {*/
+/*    background-color: #ffffff;*/
+/*    border: 1.5px dashed #ffffff;*/
+/*}*/
 
-/* 다른 사진으로 재시도 */
-.image-title-wrap {
-    padding: 0 15px 15px 15px;
-    color: #222;
-}
+/*!* 다른 사진으로 재시도 *!*/
+/*.image-title-wrap {*/
+/*    padding: 0 15px 15px 15px;*/
+/*    color: #222;*/
+/*}*/
 
 /* 이미지 업로드 캐릭터 배경 */
-.drag-text {
-    text-align: center;
-}
+/*.drag-text {*/
+/*    text-align: center;*/
+/*}*/
 
-.drag-text h3 {
-    font-weight: 500;
-    text-transform: uppercase;
-}
+/*.drag-text h3 {*/
+/*    font-weight: 500;*/
+/*    text-transform: uppercase;*/
+/*}*/
 
-/* 안 보이는 이미지 업로드 공간 */
-.file-upload-image {
-    max-height: 60%;
-    max-width: 60%;
-    margin: auto;
-    padding: 10px;
-}
+/*!* 안 보이는 이미지 업로드 공간 *!*/
+/*.file-upload-image {*/
+/*    max-height: 60%;*/
+/*    max-width: 60%;*/
+/*    margin: auto;*/
+/*    padding: 10px;*/
+/*}*/
 
-/* 다른 사진으로 재시도 */
-.try-again-btn {
-    border-radius: 40px;
-    border: solid 1.5px #35465d;
-    background-color: #35465d;
-}
+/*!* 다른 사진으로 재시도 *!*/
+/*.try-again-btn {*/
+/*    border-radius: 40px;*/
+/*    border: solid 1.5px #35465d;*/
+/*    background-color: #35465d;*/
+/*}*/
 
-.try-again-text {
-    display: block;
-    font-size: 1.5rem;
-    text-align: center;
-    color: #ffffff;
-    padding: 4px 15px;
-}
+/*.try-again-text {*/
+/*    display: block;*/
+/*    font-size: 1.5rem;*/
+/*    text-align: center;*/
+/*    color: #ffffff;*/
+/*    padding: 4px 15px;*/
+/*}*/
 
 .remove-image:hover {
     background: #c13b2a;
@@ -191,19 +194,19 @@ body {
     }
 }
 
-.upload {
-    width: 20%;
-}
+/*.upload {*/
+/*    width: 20%;*/
+/*}*/
 
-/* 얼굴 사진을 올려서 업로드 하세요!*/
-.upload-text {
-    width: 58%;
-    font-size: 1.5rem;
-    line-height: 1.53;
-    text-align: center;
-    color: #35465d;
-    margin: 0 auto;
-}
+/*!* 얼굴 사진을 올려서 업로드 하세요!*!*/
+/*.upload-text {*/
+/*    width: 58%;*/
+/*    font-size: 1.5rem;*/
+/*    line-height: 1.53;*/
+/*    text-align: center;*/
+/*    color: #35465d;*/
+/*    margin: 0 auto;*/
+/*}*/
 
 /* Team16. AKBARI */
 .footer {
@@ -212,413 +215,413 @@ body {
     text-align: center;
 }
 
-.bar-container {
-    height: 2.7rem;
-}
+/*.bar-container {*/
+/*    height: 2.7rem;*/
+/*}*/
 
-/* 피카츄 */
-.pikachu-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(200, 200, 50, 0.2);
-}
+/*!* 피카츄 *!*/
+/*.pikachu-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(200, 200, 50, 0.2);*/
+/*}*/
 
-.pikachu-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(250, 200, 30, 0.5);
-}
+/*.pikachu-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(250, 200, 30, 0.5);*/
+/*}*/
 
-/* 파이리 */
-.charmander-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(300, 150, 30, 0.3);
-}
+/*!* 파이리 *!*/
+/*.charmander-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(300, 150, 30, 0.3);*/
+/*}*/
 
-.charmander-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(300, 150, 30, 0.7);
-}
+/*.charmander-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(300, 150, 30, 0.7);*/
+/*}*/
 
-/* 꼬북이 */
-.squirtle-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(27, 175, 234, 0.2);
-}
+/*!* 꼬북이 *!*/
+/*.squirtle-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(27, 175, 234, 0.2);*/
+/*}*/
 
-.squirtle-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(27, 175, 234, 1);
-}
+/*.squirtle-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(27, 175, 234, 1);*/
+/*}*/
 
-/* 디그다 */
-.diglett-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(300, 10, 30, 0.2);
-}
+/*!* 디그다 *!*/
+/*.diglett-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(300, 10, 30, 0.2);*/
+/*}*/
 
-.diglett-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(300, 10, 30, 0.5);
-}
+/*.diglett-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(300, 10, 30, 0.5);*/
+/*}*/
 
-/* 잠만보 */
-.snorlax-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(300, 10, 30, 0.2);
-}
+/*!* 잠만보 *!*/
+/*.snorlax-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(300, 10, 30, 0.2);*/
+/*}*/
 
-.snorlax-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(300, 10, 30, 0.5);
-}
+/*.snorlax-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(300, 10, 30, 0.5);*/
+/*}*/
 
-/* 가디 */
-.growlithe-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(300, 10, 30, 0.2);
-}
+/*!* 가디 *!*/
+/*.growlithe-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(300, 10, 30, 0.2);*/
+/*}*/
 
-.growlithe-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(300, 10, 30, 0.5);
-}
+/*.growlithe-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(300, 10, 30, 0.5);*/
+/*}*/
 
-/* 푸린 */
-.jigglypuff-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(235, 166, 190, 0.2);
-}
+/*!* 푸린 *!*/
+/*.jigglypuff-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(235, 166, 190, 0.2);*/
+/*}*/
 
-.jigglypuff-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(235, 166, 190, 1);
-}
+/*.jigglypuff-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(235, 166, 190, 1);*/
+/*}*/
 
-/* 뮤 */
-.mew-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(70, 200, 20, 0.3);
-}
+/*!* 뮤 *!*/
+/*.mew-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(70, 200, 20, 0.3);*/
+/*}*/
 
-.mew-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(70, 200, 20, 0.6);
-}
+/*.mew-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(70, 200, 20, 0.6);*/
+/*}*/
 
-/* 질퍽이 */
-.grimer-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(235, 166, 190, 0.2);
-}
+/*!* 질퍽이 *!*/
+/*.grimer-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(235, 166, 190, 0.2);*/
+/*}*/
 
-.grimer-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(235, 166, 190, 1);
-}
+/*.grimer-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(235, 166, 190, 1);*/
+/*}*/
 
-/* 메타몽 */
-.ditto-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    background-color: rgba(235, 166, 190, 0.2);
-}
+/*!* 메타몽 *!*/
+/*.ditto-box {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    width: 100%;*/
+/*    background-color: rgba(235, 166, 190, 0.2);*/
+/*}*/
 
-.ditto-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 2rem;
-    border-radius: 10px;
-    background-color: rgba(235, 166, 190, 1);
-}
+/*.ditto-bar {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 2rem;*/
+/*    border-radius: 10px;*/
+/*    background-color: rgba(235, 166, 190, 1);*/
+/*}*/
 
-.percent-text {
-    font-size: 1rem;
-    color: #ffffff;
-}
+/*.percent-text {*/
+/*    font-size: 1rem;*/
+/*    color: #ffffff;*/
+/*}*/
 
-.pocketmon-label {
-    width: 20%;
-    text-align: left;
-    height: 2rem;
-}
+/*.pocketmon-label {*/
+/*    width: 20%;*/
+/*    text-align: left;*/
+/*    height: 2rem;*/
+/*}*/
 
-/* 안 보이는 이미지 업로드 공간*/
-#label-container {
-    width: 80%;
-    margin: 0 auto;
-}
+/*!* 안 보이는 이미지 업로드 공간*!*/
+/*#label-container {*/
+/*    width: 80%;*/
+/*    margin: 0 auto;*/
+/*}*/
 
-/* 안 보이는 이미지 업로드 공간 */
-.result-message {
-    font-size: 2rem;
-}
+/*!* 안 보이는 이미지 업로드 공간 *!*/
+/*.result-message {*/
+/*    font-size: 2rem;*/
+/*}*/
 
-.pocketmon-explain {
-    font-size: 1.5rem;
-}
+/*.pocketmon-explain {*/
+/*    font-size: 1.5rem;*/
+/*}*/
 
-/* 피카츄 */
-.pikachu-pocketmon-title {
-    color: #DAA520;
-}
+/*!* 피카츄 *!*/
+/*.pikachu-pocketmon-title {*/
+/*    color: #DAA520;*/
+/*}*/
 
-.pikachu-pocketmon-celeb {
-    color: #DAA520;
-    font-size: 1.2rem;
-}
+/*.pikachu-pocketmon-celeb {*/
+/*    color: #DAA520;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 파이리 */
-.charmander-pocketmon-title {
-    color: #D2691E;
-}
+/*!* 파이리 *!*/
+/*.charmander-pocketmon-title {*/
+/*    color: #D2691E;*/
+/*}*/
 
-.charmander-pocketmon-celeb {
-    color: #D2691E;
-    font-size: 1.2rem;
-}
+/*.charmander-pocketmon-celeb {*/
+/*    color: #D2691E;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 꼬북이 */
-.squirtle-pocketmon-title {
-    color: #548dd4;
-}
+/*!* 꼬북이 *!*/
+/*.squirtle-pocketmon-title {*/
+/*    color: #548dd4;*/
+/*}*/
 
-.squirtle-pocketmon-celeb {
-    color: #548dd4;
-    font-size: 1.2rem;
-}
+/*.squirtle-pocketmon-celeb {*/
+/*    color: #548dd4;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 디그다 */
-.diglett-pocketmon-title {
-    color: #FF4500;
-}
+/*!* 디그다 *!*/
+/*.diglett-pocketmon-title {*/
+/*    color: #FF4500;*/
+/*}*/
 
-.diglett-pocketmon-celeb {
-    color: #FF4500;
-    font-size: 1.2rem;
-}
+/*.diglett-pocketmon-celeb {*/
+/*    color: #FF4500;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 잠만보 */
-.snorlax-pocketmon-title {
-    color: #FF4500;
-}
+/*!* 잠만보 *!*/
+/*.snorlax-pocketmon-title {*/
+/*    color: #FF4500;*/
+/*}*/
 
-.snorlax-pocketmon-celeb {
-    color: #FF4500;
-    font-size: 1.2rem;
-}
+/*.snorlax-pocketmon-celeb {*/
+/*    color: #FF4500;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 가디 */
-.growlithe-pocketmon-title {
-    color: #FF4500;
-}
+/*!* 가디 *!*/
+/*.growlithe-pocketmon-title {*/
+/*    color: #FF4500;*/
+/*}*/
 
-.growlithe-pocketmon-celeb {
-    color: #FF4500;
-    font-size: 1.2rem;
-}
+/*.growlithe-pocketmon-celeb {*/
+/*    color: #FF4500;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 푸린 */
-.jigglypuff-pocketmon-title {
-    color: #e56995;
-}
+/*!* 푸린 *!*/
+/*.jigglypuff-pocketmon-title {*/
+/*    color: #e56995;*/
+/*}*/
 
-.jigglypuff-pocketmon-celeb {
-    color: #e56995;
-    font-size: 1.2rem;
-}
+/*.jigglypuff-pocketmon-celeb {*/
+/*    color: #e56995;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 뮤 */
-.meow-pocketmon-title {
-    color: #C0C0C0;
-}
+/*!* 뮤 *!*/
+/*.meow-pocketmon-title {*/
+/*    color: #C0C0C0;*/
+/*}*/
 
-.meow-pocketmon-celeb {
-    color: #C0C0C0;
-    font-size: 1.2rem;
-}
+/*.meow-pocketmon-celeb {*/
+/*    color: #C0C0C0;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 질퍽이 */
-.grimer-pocketmon-title {
-    color: #46c814;
-}
+/*!* 질퍽이 *!*/
+/*.grimer-pocketmon-title {*/
+/*    color: #46c814;*/
+/*}*/
 
-.grimer-pocketmon-celeb {
-    color: #46c814;
-    font-size: 1.2rem;
-}
+/*.grimer-pocketmon-celeb {*/
+/*    color: #46c814;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-/* 메타몽 */
-.ditto-pocketmon-title {
-    color: #e56995;
-}
+/*!* 메타몽 *!*/
+/*.ditto-pocketmon-title {*/
+/*    color: #e56995;*/
+/*}*/
 
-.ditto-pocketmon-celeb {
-    color: #e56995;
-    font-size: 1.2rem;
-}
+/*.ditto-pocketmon-celeb {*/
+/*    color: #e56995;*/
+/*    font-size: 1.2rem;*/
+/*}*/
 
-label {
-    cursor: pointer;
-    display: inline-block;
-    width: 90px;
-    height: 41px;
-    box-shadow: 0 0 0 8px #e5e9ea inset;
-    border-radius: 30px;
-    position: relative;
-}
+/*label {*/
+/*    cursor: pointer;*/
+/*    display: inline-block;*/
+/*    width: 90px;*/
+/*    height: 41px;*/
+/*    box-shadow: 0 0 0 8px #e5e9ea inset;*/
+/*    border-radius: 30px;*/
+/*    position: relative;*/
+/*}*/
 
-.knob {
-    position: absolute;
-    width: 41px;
-    top: 0;
-    left: 0;
-    height: 41px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 8px #f470a7 inset;
-    background-color: #fbd4e6;
-    transition: 0.3s;
-}
+/*.knob {*/
+/*    position: absolute;*/
+/*    width: 41px;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    height: 41px;*/
+/*    border-radius: 50%;*/
+/*    box-shadow: 0 0 0 8px #f470a7 inset;*/
+/*    background-color: #fbd4e6;*/
+/*    transition: 0.3s;*/
+/*}*/
 
-.knob > i {
-    position: absolute;
-    width: 4px;
-    height: 18px;
-    top: 100%;
-    background-color: #f470a7;
-    left: calc(50% - 2px);
-}
+/*.knob > i {*/
+/*    position: absolute;*/
+/*    width: 4px;*/
+/*    height: 18px;*/
+/*    top: 100%;*/
+/*    background-color: #f470a7;*/
+/*    left: calc(50% - 2px);*/
+/*}*/
 
-.knob > i:before,
-.knob > i:after {
-    width: 6px;
-    position: absolute;
-    top: 42%;
-    content: "";
-    height: 4px;
-    background-color: #f470a7;
-}
+/*.knob > i:before,*/
+/*.knob > i:after {*/
+/*    width: 6px;*/
+/*    position: absolute;*/
+/*    top: 42%;*/
+/*    content: "";*/
+/*    height: 4px;*/
+/*    background-color: #f470a7;*/
+/*}*/
 
-.knob > i:before {
-    left: 4px;
-}
+/*.knob > i:before {*/
+/*    left: 4px;*/
+/*}*/
 
-.knob > i:after {
-    left: -6px;
-}
+/*.knob > i:after {*/
+/*    left: -6px;*/
+/*}*/
 
-input:checked + label > .knob {
-    box-shadow: 0 0 0 8px #a1c6dd inset;
-    background-color: #e2ecf4;
-    transform: translateX(49px) rotate(-140deg);
-}
+/*input:checked + label > .knob {*/
+/*    box-shadow: 0 0 0 8px #a1c6dd inset;*/
+/*    background-color: #e2ecf4;*/
+/*    transform: translateX(49px) rotate(-140deg);*/
+/*}*/
 
-input:checked + label > .knob > i {
-    background-color: #a1c6dd;
-}
+/*input:checked + label > .knob > i {*/
+/*    background-color: #a1c6dd;*/
+/*}*/
 
-input:checked + label > .knob > i:after,
-input:checked + label > .knob > i:before {
-    background-color: #a1c6dd;
-}
+/*input:checked + label > .knob > i:after,*/
+/*input:checked + label > .knob > i:before {*/
+/*    background-color: #a1c6dd;*/
+/*}*/
 
-input:checked + label > .knob > i:after {
-    top: 14.5px;
-    width: 12px;
-    left: -7px;
-    transform: rotate(45deg);
-}
+/*input:checked + label > .knob > i:after {*/
+/*    top: 14.5px;*/
+/*    width: 12px;*/
+/*    left: -7px;*/
+/*    transform: rotate(45deg);*/
+/*}*/
 
-input:checked + label > .knob > i:before {
-    top: 13px;
-    width: 12px;
-    left: 0px;
-    transform: rotate(134deg);
-}
+/*input:checked + label > .knob > i:before {*/
+/*    top: 13px;*/
+/*    width: 12px;*/
+/*    left: 0px;*/
+/*    transform: rotate(134deg);*/
+/*}*/
 
 .ad-banner {
     width: 320px;
@@ -629,4 +632,5 @@ input:checked + label > .knob > i:before {
     padding: 0 15px 15px 15px;
     color: #222;
 }
+
 
