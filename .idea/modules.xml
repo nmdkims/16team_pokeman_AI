@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/16team_pokeman_AI.iml" filepath="$PROJECT_DIR$/.idea/16team_pokeman_AI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gameboy/.idea/gameboy.iml" filepath="$PROJECT_DIR$/../gameboy/.idea/gameboy.iml" />
     </modules>
   </component>
 </project>
