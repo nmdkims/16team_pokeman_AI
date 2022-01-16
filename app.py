@@ -4,17 +4,13 @@ app = Flask(__name__)
 
 
 @app.route('/')
+def home():
+    return render_template("home.html")
+
+
+@app.route('/main')
 def main():
-    return render_template("index.html")
-
-
-@app.route('/loading')
-def loading():
-    return render_template("loading.html")
-
-@app.route('/result')
-def result():
-    return render_template("result.html")
+    return render_template("main.html")
 
 
 # model.predict('모델에 넣을 수 있도록 변환한 이미지 데이터')
