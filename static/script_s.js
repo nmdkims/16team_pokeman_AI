@@ -484,7 +484,7 @@ async function predict() {
                     resultCeleb = ""
             }
 
-            let title = "<div class='" + poke_array[yourpoke] + "-poketmon-title'>" + resultTitle + "</div>"
+            let title = "<div class='" + poke_array[yourpoke][1] + "-poketmon-title'>" + resultTitle + "</div>"
             let explain = "<div class='poketmon-explain pt-2'>" + resultExplain + "</div>"
             let celeb = "<div class='" + poke_array[yourpoke][1] + "-poketmon-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
             $('.result-message').html(title + explain + celeb);
