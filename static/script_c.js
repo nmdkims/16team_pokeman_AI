@@ -149,9 +149,9 @@ async function predict() {
             resultCeleb = ""
     }
 
-    var title = "<div class='" + prediction[0].className + "-pocketmon-title'>" + resultTitle + "</div>"
-    var explain = "<div class='pocketmon-explain pt-2'>" + resultExplain + "</div>"
-    var celeb = "<div class='" + prediction[0].className + "-pocketmon-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+    var title = "<div class='" + prediction[0].className + "-poketmon-title'>" + resultTitle + "</div>"
+    var explain = "<div class='poketmon-explain pt-2'>" + resultExplain + "</div>"
+    var celeb = "<div class='" + prediction[0].className + "-poketmon-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
     $('.result-message').html(title + explain + celeb);
     var barWidth;
     for (let i = 0; i < maxPredictions; i++) {
@@ -197,7 +197,7 @@ async function predict() {
             default:
                 labelTitle = "알수없음"
         }
-        var label = "<div class='pocketmon-label d-flex align-items-center'>" + labelTitle + "</div>"
+        var label = "<div class='poketmon-label d-flex align-items-center'>" + labelTitle + "</div>"
         var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
         labelContainer.childNodes[i].innerHTML = label + bar;
     }

@@ -53,6 +53,7 @@ body.hidden {
     background: none;
     top: 20%;
     left: 10%;
+    font-family: 'DungGeunMo';
 }
 
 /* 왼쪽 조이콘 */
@@ -686,13 +687,14 @@ body.hidden {
 }
 
 /* 결과 그래프: 어떤 포켓몬인지 */
-.pocketmon-label {
-    width: 20%;
+.poketmon-label {
+    width: 35%;
     text-align: left;
     height: 2rem;
+    color: white;
 }
 
-.pocketmon-explain {
+.poketmon-explain {
     font-size: 12pt;
     color: white;
 }
@@ -724,108 +726,108 @@ body.hidden {
 
 .try-again-text {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-align: center;
     color: #ffffff;
     padding: 4px 15px;
 }
 
 /* 1. 피카츄 */
-.pikachu-pocketmon-title {
+.pikachu-poketmon-title {
     color: #DAA520;
 }
 
-.pikachu-pocketmon-celeb {
+.pikachu-poketmon-celeb {
     color: #DAA520;
     font-size: 1.2rem;
 }
 
 /* 2. 파이리 */
-.charmander-pocketmon-title {
+.charmander-poketmon-title {
     color: #D2691E;
 }
 
-.charmander-pocketmon-celeb {
+.charmander-poketmon-celeb {
     color: #D2691E;
     font-size: 1.2rem;
 }
 
 /* 3. 꼬북이 */
-.squirtle-pocketmon-title {
+.squirtle-poketmon-title {
     color: #548dd4;
 }
 
-.squirtle-pocketmon-celeb {
+.squirtle-poketmon-celeb {
     color: #548dd4;
     font-size: 1.2rem;
 }
 
 /* 4. 디그다 */
-.diglett-pocketmon-title {
+.diglett-poketmon-title {
     color: #FF4500;
 }
 
-.diglett-pocketmon-celeb {
+.diglett-poketmon-celeb {
     color: #FF4500;
     font-size: 1.2rem;
 }
 
 /* 5. 잠만보 */
-.snorlax-pocketmon-title {
+.snorlax-poketmon-title {
     color: #FF4500;
 }
 
-.snorlax-pocketmon-celeb {
+.snorlax-poketmon-celeb {
     color: #FF4500;
     font-size: 1.2rem;
 }
 
 /* 6. 가디 */
-.growlithe-pocketmon-title {
+.growlithe-poketmon-title {
     color: #FF4500;
 }
 
-.growlithe-pocketmon-celeb {
+.growlithe-poketmon-celeb {
     color: #FF4500;
     font-size: 1.2rem;
 }
 
 /* 7. 푸린 */
-.jigglypuff-pocketmon-title {
+.jigglypuff-poketmon-title {
     color: #e56995;
 }
 
-.jigglypuff-pocketmon-celeb {
+.jigglypuff-poketmon-celeb {
     color: #e56995;
     font-size: 1.2rem;
 }
 
 /* 8. 뮤 */
-.meow-pocketmon-title {
+.meow-poketmon-title {
     color: #C0C0C0;
 }
 
-.meow-pocketmon-celeb {
+.meow-poketmon-celeb {
     color: #C0C0C0;
     font-size: 1.2rem;
 }
 
 /* 9. 질퍽이 */
-.grimer-pocketmon-title {
+.grimer-poketmon-title {
     color: #46c814;
 }
 
-.grimer-pocketmon-celeb {
+.grimer-poketmon-celeb {
     color: #46c814;
     font-size: 1.2rem;
 }
 
 /* 10. 메타몽 */
-.ditto-pocketmon-title {
+.ditto-poketmon-title {
     color: #e56995;
 }
 
-.ditto-pocketmon-celeb {
+.ditto-poketmon-celeb {
     color: #e56995;
     font-size: 1.2rem;
 }
