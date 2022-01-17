@@ -1,9 +1,15 @@
 /* 전체적인 폰트 설정 */
 @font-face {
-    font-family: 'Pretendo';
-    src: url("../static/font/Pretendo.ttf") format('truetype'),
-    url("../static/font/Pretendo.woff") format('woff'),
-    url("../static/font/Pretendo.woff2") format('woff2');
+    /*font-family: 'Pretendo';*/
+    /*src: url("../static/font/Pretendo.woff2") format('woff2'),*/
+    /*url("../static/font/Pretendo.woff") format('woff'),*/
+    /*url("../static/font/Pretendo.ttf") format('truetype');*/
+
+    font-family: 'DungGeunMo';
+    src:
+    url("../static/font/DungGeunMo.woff2") format('woff2'),
+    url("../static/font/DungGeunMo.woff") format('woff'),
+    url("../static/font/DungGeunMo.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,7 +20,6 @@ body {
     overflow: hidden;
     opacity: 0;
     transition: opacity 2s .5s;
-    font-family: 'Pretendo';
 }
 
 /* 화면 페이드인 */
@@ -388,6 +393,7 @@ body.hidden {
 .drag-text h3 {
     font-weight: 500;
     text-transform: uppercase;
+    /*font-family: 'moris';*/
 }
 
 /* 스크린, 오른쪽 부분 전체: 머신러닝 결과 */
@@ -398,6 +404,9 @@ body.hidden {
     height: 100%;
     width: 55%;
     left: 45%;
+    padding: 10px;
+    overflow-y: auto;
+    top: 0;
 }
 
 /* 스크린, 오른쪽 부분: 로딩중 (안 보이게) */
@@ -684,12 +693,14 @@ body.hidden {
 }
 
 .pocketmon-explain {
-    font-size: 1.5rem;
+    font-size: 12pt;
+    color: white;
 }
 
 /* 안 보이는 이미지 업로드 공간 */
 .result-message {
     font-size: 2rem;
+    font-family: 'DungGeunMo';
 }
 
 /* 안 보이는 이미지 업로드 공간 */
