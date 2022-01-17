@@ -51,20 +51,17 @@
                         <div class="image-upload-wrap content"> <!-- 이미지 업로드 공간 -->
                             <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*"/>
                             <img class="file-upload-image" id="face-image" src="#" alt="your image">
-
                             <div class="drag-text">
-                                <img src="https://i.imgur.com/MV0tjmd.png"
-                                     class="mt-5 pt-5 upload">
-                                <img src="https://i.imgur.com/twN5b08.png"
-                                     class="mt-5 pt-5 upload">
-                                <h3 class="mb-5 pb-5 pt-4  upload-text">Upload your photo</h3>
+                                <img class="mt-5 pt-5 upload" src="https://i.imgur.com/MV0tjmd.png" />
+                                <img class="mt-5 pt-5 upload" src="https://i.imgur.com/twN5b08.png" />
+                                <h3 class="mb-5 pb-5 pt-4  upload-text">Upload<br>your<br>photo</h3>
                             </div>
                         </div>
                         <div class="file-upload-content"> <!-- 안보이는 이미지 업로드 공간 -->
                             <div id="loading" class="animated bounce">
                                 <div class="spinner-border" role="status">
                                     <span class="sr-only">Loading...</span>
-                                </div>
+                                </div><p></p>
                                 <p class="text-center">AI가 당신의 포켓몬상을 분석중입니다.</p>
                             </div>
                             <img class="result-image" style="" src="">

@@ -20,6 +20,12 @@ body {
     overflow: hidden;
     opacity: 0;
     transition: opacity 2s .5s;
+
+    height: 100vh;
+    background-image: url('https://i.imgur.com/BGmzVbe.jpg');
+    background-repeat : no-repeat;
+    background-size : cover;
+
 }
 
 /* 화면 페이드인 */
@@ -354,24 +360,13 @@ body.hidden {
 }
 
 /* 스크린, 왼쪽 부분: 마우스 올리면 흰색으로 변하는 효과 */
+
+/*.image-dropping,*/
 /*.image-upload-wrap:hover {*/
 /*    background-color: #ffffff;*/
 /*    border: 1.5px dashed #ffffff;*/
 /*    transition: 1s;*/
 /*}*/
-
-.image-upload-wrap img:nth-child(3){
-    display:none;
-    z-index: 1
-}
-.image-upload-wrap:hover img:nth-child(2){
-    display:none;
-}
-.image-upload-wrap:hover img:nth-child(3){
-    display:none;
-    z-index: -1
-}
-
 
 
 /* 스크린, 왼쪽 부분(1): 파일 업로드 */
@@ -398,16 +393,32 @@ body.hidden {
     text-align: center;
 }
 
+
 /* 스크린, 왼쪽 부분(1): 피카츄 사진 (크기 조절) */
 .upload {
     width: 20%;
 }
 
+/*포켓볼 호버기능*/
+.drag-text img:nth-child(2){display:none}
+.image-upload-wrap:hover .drag-text img:first-child{display:none}
+.image-upload-wrap:hover .drag-text img:nth-child(2){
+    display:inline-block;
+}
+/*.image-upload-wrap:hover .drag-text h3{*/
+/*    font-family: 'DungGeunMo';*/
+/*}*/
+
+
+
+
+
 /* 스크린, 왼쪽 부분(1): Upload your photo */
 .drag-text h3 {
     font-weight: 500;
     text-transform: uppercase;
-    /*font-family: 'moris';*/
+    color: white;
+    opacity: 0.7;
 }
 
 /* 스크린, 오른쪽 부분 전체: 머신러닝 결과 */
@@ -428,6 +439,7 @@ body.hidden {
     display: none;
     color: white;
     text-align: center;
+    margin-top: 80px;
 }
 
 /* 가로 600px 이하: 깜찍한 스위치가 나타납니다! */

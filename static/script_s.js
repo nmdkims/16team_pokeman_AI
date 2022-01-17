@@ -431,52 +431,52 @@ async function predict() {
                 case 7:
                     resultTitle = "피카츄"
                     resultExplain = "다정다감하고 귀여운 당신은 모든 사람들에게 즐거움을 주는 호감형이다! 친절하고 활발한 성격으로 어디에서도 인기폭발이며 애교와 웃음이 많아 연인에게 특히나 사랑스럽다. 당신은 애인바라기로 애인의 관심이 부족하면 시무룩해지고 외로움을 타는 모습이 마치 강아지와 똑 닮았다!"
-                    resultCeleb = "강아지상 연예인: 강다니엘, 백현(엑소), 박보검, 송중기"
+                    resultCeleb = "피카츄상 연예인: 강다니엘, 백현(엑소), 솔지(EXID)"
                     break;
                 case 0:
                     resultTitle = "파이리"
                     resultExplain = "천진난만하고 귀여운 당신은 주변 사람들에게 기쁨을 주는 행복바이러스다! 호기심이 많아 활발하며 귀엽고 순수한 외모로 연인의 보호본능을 자극한다. 존재 자체가 상큼한 당신은 특별한 애교 없이도 연인에게 너무나도 사랑스럽다!"
-                    resultCeleb = "토끼상 연예인: 정국(방탄소년단), 바비(아이콘), 박지훈(워너원), 수호(엑소)"
+                    resultCeleb = "파이리상 연예인: 다현(트와이스), 동해(슈퍼주니어), 엠버(f(x)), 김영철(배우/feat.김두한)"
                     break;
                 case 9:
                     resultTitle = "꼬부기"
                     resultExplain = "무뚝뚝한 당신의 첫인상은 차가워 보이지만 묘한 매력을 풍겨 언제나 인기가 넘친다. 자존심이 세계 1등과 맞먹지만 관심 받는 것을 좋아하고 연인에게는 은근히 애교쟁이다. 시크한 츤데레로 연인에게 끊임없이 설렘을 안겨주는 당신은 고양이와 닮았다!"
-                    resultCeleb = "고양이상 연예인: 황민현(뉴이스트), 시우민(엑소), 강동원, 이종석, 이준기"
+                    resultCeleb = "꼬부기상 연예인: 하연수, 유정(브레이브걸스), 솔라(마마무), 나연(트와이스)"
                     break;
                 case 1:
                     resultTitle = "디그다"
-                    resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 꼼꼼하고 섬세한 성격으로 연인을 헌신적으로 챙겨주는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
-                    resultCeleb = "곰상 연예인: 마동석, 조진웅, 조세호, 안재홍"
+                    resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 애교만점 깜찍 덩어리! 매끈한 당신의 섹시함에 빠지면 헤어나올 수가 없겠군요!!"
+                    resultCeleb = "디그다 상 연예인: 밥샵(격투기선수), 제이슨 스타뎀, 존 맥클레인(다이하드)"
                     break;
                 case 8:
                     resultTitle = "잠만보"
-                    resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 꼼꼼하고 섬세한 성격으로 연인을 헌신적으로 챙겨주는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
-                    resultCeleb = "곰상 연예인: 마동석, 조진웅, 조세호, 안재홍"
+                    resultExplain = "묵직해보이지만 볼수록 매력덩어리! 안정감있는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
+                    resultCeleb = "잠만보상 연예인: 유민상(개그맨), 마동석, 조세호"
                     break;
                 case 4:
                     resultTitle = "가디"
                     resultExplain = "무심한 성격에 첫인상은 나쁜 남자 같지만, 알고 보면 따뜻함이 묻어나는 당신! 시크한 매력에 선뜻 다가가지 못하지만 한번 다가가면 헤어나올 수 없는 터프한 매력을 가진 카리스마 있는 남자다."
-                    resultCeleb = "공룡상 연예인: 윤두준(하이라이트), 이민기, 김우빈, 육성재(비투비), 공유"
+                    resultCeleb = "가디상 연예인: 고경표, 윤두준(하이라이트), 이동욱, 공유"
                     break;
                 case 5:
                     resultTitle = "푸린"
-                    resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 꼼꼼하고 섬세한 성격으로 연인을 헌신적으로 챙겨주는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
-                    resultCeleb = "곰상 연예인: 마동석, 조진웅, 조세호, 안재홍"
+                    resultExplain = "당신은 재기발랄 태생부터 연예인! 많은 사람들의 관심과 사랑을 받으며, 사람들에게 그 사랑을 되돌려주는 전형적인 초특급 슈퍼스타 연예인"
+                    resultCeleb = "푸린상 연예인: 김호성(내배캠 NAMED USER), 이혜정(요리연구가), 초아(AOA)"
                     break;
                 case 6:
                     resultTitle = "뮤"
-                    resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 꼼꼼하고 섬세한 성격으로 연인을 헌신적으로 챙겨주는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
-                    resultCeleb = "곰상 연예인: 마동석, 조진웅, 조세호, 안재홍"
+                    resultExplain = "옆에 있으면 눈이 가는 귀염뽀짝! 매력충만! 당신은 뭘해도 사랑스러운 귀염형 스타일"
+                    resultCeleb = "뮤상 연예인: 손연재, 이솜, 한예리, 한지민"
                     break;
                 case 3:
                     resultTitle = "질퍽이"
-                    resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 꼼꼼하고 섬세한 성격으로 연인을 헌신적으로 챙겨주는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
-                    resultCeleb = "곰상 연예인: 마동석, 조진웅, 조세호, 안재홍"
+                    resultExplain = "첫인상은 피하고 싶지만 알고보면 사귀고 싶은 능력자 친구! 자신의 능력을 십분 활용할 줄 아는 재능형 인재"
+                    resultCeleb = "질퍽이상 연예인: 방시혁, 갱제(스트리머), 김태호(PD), ,최홍만(격투기선수), 고창석"
                     break;
                 case 2:
                     resultTitle = "메타몽"
-                    resultExplain = "첫 인상은 무서워 보이지만 알고 보면 귀여운 매력의 당신! 꼼꼼하고 섬세한 성격으로 연인을 헌신적으로 챙겨주는 당신은 연인에게 듬직한 존재! 포근한 매력에 듬직함까지 갖춘 최고의 남자다!"
-                    resultCeleb = "곰상 연예인: 마동석, 조진웅, 조세호, 안재홍"
+                    resultExplain = "특징이 없어보이지만 알고보면 팔방미인! 당신은 팔색조! 사교성이 좋으며 두루두루 잘 어울리는 호감형 스타일!"
+                    resultCeleb = "메타몽상 연예인: 안재홍, 김종국, 조우진, 비, 이종석"
                     break;
                 default:
                     resultTitle = "알수없음"
@@ -486,7 +486,7 @@ async function predict() {
 
             let title = "<div class='" + poke_array[yourpoke] + "-poketmon-title'>" + resultTitle + "</div>"
             let explain = "<div class='poketmon-explain pt-2'>" + resultExplain + "</div>"
-            let celeb = "<div class='" + poke_array[yourpoke] + "-poketmon-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            let celeb = "<div class='" + poke_array[yourpoke][1] + "-poketmon-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
             $('.result-message').html(title + explain + celeb);
             let barWidth;
 
