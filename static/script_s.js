@@ -47,7 +47,6 @@ function readURL(input) {
             $('#loading').show();
 
 
-
             $('.file-upload-image').attr('src', e.target.result);
             // $('.file-upload-image').setAttribute('src', e.target.result);
 
@@ -408,16 +407,18 @@ async function predict() {
             }
 
 
-            console.log("predic입성")
+            console.log("정렬전 모습")
             console.log(poke_array[0])
             console.log(poke_array[1])
             console.log(poke_array[2])
             console.log(poke_array[3])
             console.log(poke_array[4])
             console.log(poke_array[5])
-            console.log(poke_array[0][0])
-            console.log(poke_array[0][1])
-            console.log(poke_array[0][2])
+            console.log(poke_array[6])
+            console.log(poke_array[7])
+            console.log(poke_array[8])
+            console.log(poke_array[9])
+            console.log("===============")
 
             console.log(yourpoke)
             // let image = document.getElementById("face-image")
@@ -489,6 +490,33 @@ async function predict() {
             let celeb = "<div class='" + poke_array[yourpoke][1] + "-poketmon-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
             $('.result-message').html(title + explain + celeb);
             let barWidth;
+
+            poke_array.sort((a, b) => {
+                console.log(a[0])
+                console.log(a[0][1])
+                console.log(a[1])
+                if (parseFloat(a[2]) > parseFloat(b[2])) {
+                    return -1;
+                } else
+                    return 1;
+            })
+
+            console.log("정렬후 모습")
+            console.log(poke_array[0])
+            console.log(poke_array[1])
+            console.log(poke_array[2])
+            console.log(poke_array[3])
+            console.log(poke_array[4])
+            console.log(poke_array[5])
+            console.log(poke_array[6])
+            console.log(poke_array[7])
+            console.log(poke_array[8])
+            console.log(poke_array[9])
+            console.log("===============")
+            console.log(poke_array[0][0])
+            console.log(poke_array[0][1])
+            console.log(poke_array[0][2])
+
 
             for (let i = 0; i < 10; i++) {
                 if (parseFloat(poke_array[i][2]).toFixed(2) > 0.1) {
