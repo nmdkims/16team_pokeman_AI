@@ -15,6 +15,7 @@
 <!--<script src="/static/model.js"></script>-->
 
 <body>
+<audio id="bgm" src="/static/sound/bgm.mp3" autoPlay></audio>
 <div class="box">
     <div id="logo-box">
         <img id=pocketmon-logo src="/static/img/pokemonlogo.png">
@@ -29,6 +30,7 @@
                 <div class="d-pad-right" onclick="audio.play()"><div class="arrow-right"></div></div>
                 <div class="d-pad-bottom" onclick="audio.play()"><div class="arrow-down"></div></div>
             </div>
+            <div onclick="muted()" class="square-button"></div>
             <div class="square-button" onclick="audio.play()"></div>
         </div>
         <div class="joy-con-right">
@@ -91,6 +93,11 @@
       <strong>Your browser does not support the video tag.</strong>
     </video>
 </div>
+<script>
+    function muted() {
+        document.getElementById("bgm").muted = true;
+    }
+</script>
 <script>document.body.classList.add("reveal");</script>
 <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
