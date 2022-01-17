@@ -354,12 +354,12 @@ body.hidden {
 }
 
 /* 스크린, 왼쪽 부분: 마우스 올리면 흰색으로 변하는 효과 */
-.image-dropping,
-.image-upload-wrap:hover {
-    background-color: #ffffff;
-    border: 1.5px dashed #ffffff;
-    transition: 1s;
-}
+/*.image-dropping,*/
+/*.image-upload-wrap:hover {*/
+/*    background-color: #ffffff;*/
+/*    border: 1.5px dashed #ffffff;*/
+/*    transition: 1s;*/
+/*}*/
 
 /* 스크린, 왼쪽 부분(1): 파일 업로드 */
 .file-upload-input {
@@ -389,6 +389,20 @@ body.hidden {
 .upload {
     width: 20%;
 }
+
+/*포켓볼 호버기능*/
+.drag-text img:nth-child(2){display:none}
+.image-upload-wrap:hover .drag-text img:first-child{display:none}
+.image-upload-wrap:hover .drag-text img:nth-child(2){
+    display:inline-block;
+}
+/*.image-upload-wrap:hover .drag-text h3{*/
+/*    font-family: 'DungGeunMo';*/
+/*}*/
+
+
+
+
 
 /* 스크린, 왼쪽 부분(1): Upload your photo */
 .drag-text h3 {
