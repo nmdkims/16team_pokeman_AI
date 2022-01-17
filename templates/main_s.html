@@ -13,7 +13,7 @@
 <!--<script src="/static/model.js"></script>-->
 
 <body>
-<audio src="/static/sound/bgm.mp3" autoPlay></audio>
+<audio id="bgm" src="/static/sound/bgm.mp3" autoPlay></audio>
 <div class="box">
     <div class="switch-container">
         <div class="joy-con-left">
@@ -33,7 +33,7 @@
                     <div class="arrow-down"></div>
                 </div>
             </div>
-            <div class="square-button"></div>
+            <div onclick="muted()" class="square-button"></div>
         </div>
         <div class="joy-con-right">
             <div class="analog-right"></div>
@@ -90,6 +90,11 @@
         </div>
     </div>
 </div>
+<script>
+    function muted() {
+        document.getElementById("bgm").muted = true;
+    }
+</script>
 <script>document.body.classList.add("reveal");</script>
 <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
