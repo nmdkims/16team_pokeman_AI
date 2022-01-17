@@ -1,10 +1,5 @@
 /* 전체적인 폰트 설정 */
 @font-face {
-    /*font-family: 'Pretendo';*/
-    /*src: url("../static/font/Pretendo.woff2") format('woff2'),*/
-    /*url("../static/font/Pretendo.woff") format('woff'),*/
-    /*url("../static/font/Pretendo.ttf") format('truetype');*/
-
     font-family: 'DungGeunMo';
     src:
     url("../static/font/DungGeunMo.woff2") format('woff2'),
@@ -308,7 +303,6 @@ body.hidden {
     background: #414548;
     height: 100%;
     box-shadow: 20px 20px rgba(0, 0, 0, 0.3);
-    /*z-index: -1;*/
 }
 
 /* 스크린 (검은색 테두리) */
@@ -319,7 +313,6 @@ body.hidden {
     left: 3.7%;
     top: 5%;
     border-radius: 10px;
-    /*background: #999999;*/
     height: 90%;
     z-index: 100;
 }
@@ -356,7 +349,6 @@ body.hidden {
     object-fit: contain;
     margin-top: -16px;
     transition: 2s;
-    /*text-align: center;*/
 }
 
 /* 스크린, 왼쪽 부분: 마우스 올리면 흰색으로 변하는 효과 */
@@ -383,7 +375,6 @@ body.hidden {
     padding: 10px;
     width: 100%;
     height: 100%;
-    /*object-fit: contain;*/
     display: none;
 
 }
@@ -429,10 +420,24 @@ body.hidden {
     height: 100%;
     width: 55%;
     left: 45%;
-    padding: 10px;
+    padding: 0 10px;
     overflow-y: auto;
     top: 0;
 }
+
+.file-upload-content::-webkit-scrollbar {
+    width: 12px;
+	background-color: #F5F5F5;
+}
+
+.file-upload-content::-webkit-scrollbar-thumb {
+	background-color: #999999;
+}
+
+.file-upload-content::-webkit-scrollbar-track {
+	background-color: #777777;
+}
+
 
 /* 스크린, 오른쪽 부분: 로딩중 (안 보이게) */
 #loading {
@@ -496,6 +501,11 @@ body.hidden {
     [class^="arrow-"] {
         display: none;
     }
+
+    .file-upload {
+        display: none;
+    }
+
 }
 
 
@@ -533,7 +543,7 @@ body.hidden {
     height: 2rem;
     border-radius: 10px;
     width: 100%;
-    background-color: rgba(300, 150, 30, 0.3);
+    background-color: rgba(236, 106, 41, 0.2);
 }
 
 .charmander-bar {
@@ -542,7 +552,7 @@ body.hidden {
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: rgba(300, 150, 30, 0.7);
+    background-color: rgba(236, 106, 41, 0.8);
 }
 
 /* 3. 꼬북이 */
@@ -573,7 +583,7 @@ body.hidden {
     height: 2rem;
     border-radius: 10px;
     width: 100%;
-    background-color: rgba(300, 10, 30, 0.2);
+    background-color: rgba(147, 98, 48, 0.2);
 }
 
 .diglett-bar {
@@ -582,7 +592,7 @@ body.hidden {
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: rgba(300, 10, 30, 0.5);
+    background-color: rgba(147, 98, 48, 1);
 }
 
 /* 5. 잠만보 */
@@ -593,7 +603,7 @@ body.hidden {
     height: 2rem;
     border-radius: 10px;
     width: 100%;
-    background-color: rgba(300, 10, 30, 0.2);
+    background-color: rgba(7, 100, 101, 0.2);
 }
 
 .snorlax-bar {
@@ -602,7 +612,7 @@ body.hidden {
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: rgba(300, 10, 30, 0.5);
+    background-color: rgba(7, 100, 101, 1);
 }
 
 /* 6. 가디 */
@@ -622,7 +632,7 @@ body.hidden {
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: rgba(300, 10, 30, 0.5);
+    background-color: rgba(300, 10, 30, 0.6);
 }
 
 /* 7. 푸린 */
@@ -653,7 +663,7 @@ body.hidden {
     height: 2rem;
     border-radius: 10px;
     width: 100%;
-    background-color: rgba(70, 200, 20, 0.3);
+    background-color: rgba(242, 203, 214, 0.2);
 }
 
 .mew-bar {
@@ -662,7 +672,7 @@ body.hidden {
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: rgba(70, 200, 20, 0.6);
+    background-color: rgba(242, 203, 214, 0.7);
 }
 
 /* 9. 질퍽이 */
@@ -673,7 +683,7 @@ body.hidden {
     height: 2rem;
     border-radius: 10px;
     width: 100%;
-    background-color: rgba(235, 166, 190, 0.2);
+    background-color: rgba(105, 83, 111, 0.4);
 }
 
 .grimer-bar {
@@ -682,7 +692,7 @@ body.hidden {
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: rgba(235, 166, 190, 1);
+    background-color: rgba(105, 83, 111, 1);
 }
 
 /* 10. 메타몽 */
@@ -693,7 +703,7 @@ body.hidden {
     height: 2rem;
     border-radius: 10px;
     width: 100%;
-    background-color: rgba(235, 166, 190, 0.2);
+    background-color: rgba(221, 134, 193, 0.4);
 }
 
 .ditto-bar {
@@ -702,7 +712,7 @@ body.hidden {
     left: 0;
     height: 2rem;
     border-radius: 10px;
-    background-color: rgba(235, 166, 190, 1);
+    background-color: rgba(221, 134, 193, 1);
 }
 
 /* 결과 그래프: 몇 %인지 텍스트 */
@@ -745,8 +755,8 @@ body.hidden {
 /* 다른 사진으로 재시도 */
 .try-again-btn {
     border-radius: 40px;
-    border: solid 1.5px #35465d;
-    background-color: #35465d;
+    border: solid 1.5px #1f7499;
+    background-color: #1f7499;
 }
 
 .try-again-text {
@@ -764,16 +774,16 @@ body.hidden {
 
 .pikachu-poketmon-celeb {
     color: #DAA520;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* 2. 파이리 */
 .charmander-poketmon-title {
-    color: #D2691E;
+    color: #ec6a29;
 }
 
 .charmander-poketmon-celeb {
-    color: #D2691E;
+    color: #ec6a29;
     font-size: 1.2rem;
 }
 
@@ -789,21 +799,21 @@ body.hidden {
 
 /* 4. 디그다 */
 .diglett-poketmon-title {
-    color: #FF4500;
+    color: #a77f4e;
 }
 
 .diglett-poketmon-celeb {
-    color: #FF4500;
+    color: #a77f4e;
     font-size: 1.2rem;
 }
 
 /* 5. 잠만보 */
 .snorlax-poketmon-title {
-    color: #FF4500;
+    color: #226787;
 }
 
 .snorlax-poketmon-celeb {
-    color: #FF4500;
+    color: #226787;
     font-size: 1.2rem;
 }
 
@@ -828,32 +838,32 @@ body.hidden {
 }
 
 /* 8. 뮤 */
-.meow-poketmon-title {
-    color: #C0C0C0;
+.mew-poketmon-title {
+    color: #f2cbd6;
 }
 
-.meow-poketmon-celeb {
-    color: #C0C0C0;
+.mew-poketmon-celeb {
+    color: #f2cbd6;
     font-size: 1.2rem;
 }
 
 /* 9. 질퍽이 */
 .grimer-poketmon-title {
-    color: #46c814;
+    color: #bb9cc4;
 }
 
 .grimer-poketmon-celeb {
-    color: #46c814;
+    color: #bb9cc4;
     font-size: 1.2rem;
 }
 
 /* 10. 메타몽 */
 .ditto-poketmon-title {
-    color: #e56995;
+    color: #dd86c1;
 }
 
 .ditto-poketmon-celeb {
-    color: #e56995;
+    color: #dd86c1;
     font-size: 1.2rem;
 }
 
@@ -865,72 +875,4 @@ label {
     box-shadow: 0 0 0 8px #e5e9ea inset;
     border-radius: 30px;
     position: relative;
-}
-
-.knob {
-    position: absolute;
-    width: 41px;
-    top: 0;
-    left: 0;
-    height: 41px;
-    border-radius: 50%;
-    box-shadow: 0 0 0 8px #f470a7 inset;
-    background-color: #fbd4e6;
-    transition: 0.3s;
-}
-
-.knob > i {
-    position: absolute;
-    width: 4px;
-    height: 18px;
-    top: 100%;
-    background-color: #f470a7;
-    left: calc(50% - 2px);
-}
-
-.knob > i:before,
-.knob > i:after {
-    width: 6px;
-    position: absolute;
-    top: 42%;
-    content: "";
-    height: 4px;
-    background-color: #f470a7;
-}
-
-.knob > i:before {
-    left: 4px;
-}
-
-.knob > i:after {
-    left: -6px;
-}
-
-input:checked + label > .knob {
-    box-shadow: 0 0 0 8px #a1c6dd inset;
-    background-color: #e2ecf4;
-    transform: translateX(49px) rotate(-140deg);
-}
-
-input:checked + label > .knob > i {
-    background-color: #a1c6dd;
-}
-
-input:checked + label > .knob > i:after,
-input:checked + label > .knob > i:before {
-    background-color: #a1c6dd;
-}
-
-input:checked + label > .knob > i:after {
-    top: 14.5px;
-    width: 12px;
-    left: -7px;
-    transform: rotate(45deg);
-}
-
-input:checked + label > .knob > i:before {
-    top: 13px;
-    width: 12px;
-    left: 0px;
-    transform: rotate(134deg);
 }
