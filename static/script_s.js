@@ -484,50 +484,50 @@ async function predict() {
                     resultCeleb = ""
             }
 
-            let title = "<div class='" + poke_array[yourpoke] + "-poketmon-title'>" + resultTitle + "</div>"
+            let title = "<div class='" + poke_array[yourpoke][1] + "-poketmon-title'>" + resultTitle + "</div>"
             let explain = "<div class='poketmon-explain pt-2'>" + resultExplain + "</div>"
-            let celeb = "<div class='" + poke_array[yourpoke] + "-poketmon-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+            let celeb = "<div class='" + poke_array[yourpoke][1] + "-poketmon-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
             $('.result-message').html(title + explain + celeb);
             let barWidth;
 
-            for (let i = 0; i < predstr.length; i++) {
-                if (parseFloat(predstr[i]).toFixed(2) > 0.1) {
-                    barWidth = Math.round(parseFloat(predstr[i]).toFixed(2) * 100) + "%";
-                } else if (parseFloat(predstr[i]).toFixed(2) >= 0.01) {
+            for (let i = 0; i < 10; i++) {
+                if (parseFloat(poke_array[i][2]).toFixed(2) > 0.1) {
+                    barWidth = Math.round(parseFloat(poke_array[i][2]).toFixed(2) * 100) + "%";
+                } else if (parseFloat(poke_array[i][2]).toFixed(2) >= 0.01) {
                     barWidth = "4%"
                 } else {
                     barWidth = "2%"
                 }
                 let labelTitle;
-                switch (i) {
-                    case 7:
+                switch (poke_array[i][1]) {
+                    case "pikachu":
                         labelTitle = "피카츄"
                         break;
-                    case 0:
+                    case "charmander":
                         labelTitle = "파이리"
                         break;
-                    case 9:
+                    case "squirtle":
                         labelTitle = "꼬부기"
                         break;
-                    case 1:
+                    case 'diglett':
                         labelTitle = "디그다"
                         break;
-                    case 8:
+                    case "snorlax":
                         labelTitle = "잠만보"
                         break;
-                    case 4:
+                    case "growlithe":
                         labelTitle = "가디"
                         break;
-                    case 5:
+                    case "jigglypuff":
                         labelTitle = "푸린"
                         break;
-                    case 6:
+                    case "mew":
                         labelTitle = "뮤"
                         break;
-                    case 3:
+                    case "grimer":
                         labelTitle = "질퍽이"
                         break;
-                    case 2:
+                    case "ditto":
                         labelTitle = "메타몽"
                         break;
                     default:

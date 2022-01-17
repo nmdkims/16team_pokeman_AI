@@ -93,7 +93,7 @@ def give_model():
         #     print('True : ' + str(' Predict : ' + str(pred[i])))
 
         print("Classes확인0", classes[0])
-        # print("Classes확인1", classes[1])
+        print("Classes확인1", classes[0])
         # print("Classes확인2", classes[2])
         # print("Classes확인3", classes[3])
         # print("Classes확인4", classes[4])
