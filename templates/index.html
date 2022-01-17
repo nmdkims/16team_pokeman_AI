@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
+    <link rel="stylesheet" href="../static/test.css">
 </head>
 <script>
     <!-- 가운데 몬스터볼 클릭음 (피카츄) -->
@@ -46,6 +47,7 @@
     #pokeball {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);height: 100px;z-index: 100;}
 </style>
 <body>
+<canvas id="canvas1"></canvas>
 <div class="hoverbox">
     <div class="screen">
         <a href="/main_s"><img id="pokeball" src="/static/img/poketball.png" onmouseover="audio.play()"></a>
@@ -58,4 +60,5 @@
     </div>
 </div>
 </body>
+<script src="../static/test.js"></script>
 </html>
