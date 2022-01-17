@@ -28,6 +28,21 @@ body.hidden {
     opacity: 0;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+    height: 50px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: lightpink;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: white;
+}
+
 /* 스위치와 여백영역 */
 .box {
     position: relative;
@@ -37,7 +52,15 @@ body.hidden {
     border: none;
     height: 800px;
     width: 1350px;
+}
 
+#logo-box {
+    text-align: center;
+}
+
+#pocketmon-logo {
+    height: 150px;
+    margin-top: 20px;
 }
 
 /* 스위치 */
@@ -46,7 +69,7 @@ body.hidden {
     width: 80%;
     height: 60%;
     background: none;
-    top: 20%;
+    top: 23%;
     left: 10%;
     font-family: 'DungGeunMo';
 }
@@ -322,6 +345,14 @@ body.hidden {
     z-index: -100;
 }
 
+#makers-name {
+    display:none;
+}
+
+#final-video {
+    display: none;
+}
+
 
 /* 여기서부터 원본 버전과 유사합니다. */
 /* 스크린 왼쪽 부분, 크기 조절 임시용 */
@@ -384,15 +415,10 @@ body.hidden {
 /*포켓볼 호버기능*/
 .drag-text img:nth-child(2){display:none}
 .image-upload-wrap:hover .drag-text img:first-child{display:none}
-.image-upload-wrap:hover .drag-text img:nth-child(2){
-    display:inline-block;
-}
+.image-upload-wrap:hover .drag-text img:nth-child(2){display:inline-block;}
 /*.image-upload-wrap:hover .drag-text h3{*/
 /*    font-family: 'DungGeunMo';*/
 /*}*/
-
-
-
 
 
 /* 스크린, 왼쪽 부분(1): Upload your photo */
@@ -437,9 +463,13 @@ body.hidden {
 /* 가로 600px 이하: 깜찍한 스위치가 나타납니다! */
 @media all and (max-width: 600px) {
     .box {
-        margin-top: 100px;
+        margin-top: 50px;
         width: 250px;
         height: 175px;
+    }
+
+    .switch-container{
+        margin-top: 30px;
     }
 
     /* 왼쪽 조이콘: 큰 동그라미 버튼 */
@@ -493,6 +523,38 @@ body.hidden {
         display: none;
     }
 
+    #pocketmon-logo {
+        display: block;
+        width: 240px;
+        height: 60px;
+        margin: 0 auto;
+        transition: 0.5s;
+    }
+
+    #makers-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: DungGeunMo;
+        margin-top: 160px;
+        transition: 0.8s
+    }
+
+    #makers-name p {
+        font-size: 15pt;
+        transition: 1s;
+
+    }
+    #makers-name p:hover{
+        color: #00c3e3;
+        transition: 1.5s;
+    }
+
+    #final-video {
+        display: block;
+        margin: 15px auto 0;
+        max-width: 90%;
+    }
 }
 
 
