@@ -113,8 +113,10 @@ async function predict() {
             let pred = response['pred']
             let yourpoke = parseFloat(response['pokeclass'][1])
 
+
+
             console.log(yourpoke)
-            console.log("클라이언트")
+            console.log("클라이ㅇㅇㅇ언트")
             console.log(pred)
 
             // pred 내용 확인
