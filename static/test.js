@@ -11,11 +11,12 @@ gradient.addColorStop(1, '#533fc2');
 
 class Symbol {
     constructor(x, y, fontSize, canvasHeight) {
-        this.characters = '김 훈 희 최 양 임 남 효 정 김 지 용 한 태 영';
+        this.characters = 'kim hoon hee kim ji yong nam hyo jung han tae young choi yang im';
         // this.characters = 'ア ァ カ サ タ ナ ハ マ ヤ ャ ラ ワ ガ ザ ダ バ パ イ ィ キ シ チ ニ ヒ ミ リ ヰ ギ ジ ヂ ビ ピ ウ ゥ ク ス ツ ヌ フ ム ユ ュ ル グ ズ ブ ヅ プ エ ェ ケ セ テ ネ ヘ メ レ ヱ ゲ ゼ デ ベ ペ オ ォ コ ソ ト ノ ホ モ ヨ ョ ロ ヲ ゴ ゾ ド ボ ポ ヴ ッ ン 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         this.x = x;
         this.y = y;
         this.fontSize = fontSize;
+        this.fontfamily = 'Tokyo Knights';
         this.text = '';
         this.canvasHeight = canvasHeight;
     }
