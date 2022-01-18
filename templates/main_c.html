@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <head>
     <title>Pokemon Test</title>
+<!--    파비콘-->
+    <link rel="shortcut icon" href="https://media.vlpt.us/images/ecec1023/post/7f9f4778-28d6-4fd3-82e8-a2fb1a017eb0/favicon.ico">
+    <link rel="icon" href="https://media.vlpt.us/images/ecec1023/post/7f9f4778-28d6-4fd3-82e8-a2fb1a017eb0/favicon.ico">
     <meta charset="utf-8"/>
     <meta name="description" content="Pokemon Face Test"/>
     <link rel="stylesheet" href="/static/main.css" type="text/css"/>
@@ -8,44 +11,50 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin="anonymous">
 </head>
+<script>
+    let audio = new Audio("/static/sound/gameboy-sound.mp3")
+</script>
+
 <body>
-<audio src="/static/sound/bgm.mp3" autoPlay></audio>
+<audio id="bgm" src="/static/sound/bgm.mp3" autoPlay></audio>
 <div class="box">
+
      <div id="logo-box">
+
         <img id=pocketmon-logo src="/static/img/pokemonlogo.png">
     </div>
     <div class="switch-container">
         <div class="joy-con-left">
-            <div class="ellipse-button"></div>
-            <div class="analog-left"></div>
+            <div class="ellipse-button" onclick="audio.play()"></div>
+            <div class="analog-left" onclick="audio.play()"></div>
             <div class="d-pad-container-left">
-                <div class="d-pad-top">
+                <div class="d-pad-top" onclick="audio.play()">
                     <div class="arrow-up"></div>
                 </div>
-                <div class="d-pad-left">
+                <div class="d-pad-left" onclick="audio.play()">
                     <div class="arrow-left"></div>
                 </div>
-                <div class="d-pad-right">
+                <div class="d-pad-right" onclick="audio.play()">
                     <div class="arrow-right"></div>
                 </div>
-                <div class="d-pad-bottom">
+                <div class="d-pad-bottom" onclick="audio.play()">
                     <div class="arrow-down"></div>
                 </div>
             </div>
-            <div class="square-button"></div>
+            <div onclick="muted()" class="square-button"></div>
         </div>
         <div class="joy-con-right">
-            <div class="analog-right"></div>
-            <div class="circle-button-right"></div>
+            <div class="analog-right" onclick="audio.play()"></div>
+            <div class="circle-button-right" onclick="audio.play()"></div>
             <div class="d-pad-container-right">
-                <div class="d-pad-top">X</div>
-                <div class="d-pad-left">Y</div>
-                <div class="d-pad-right">A</div>
-                <div class="d-pad-bottom">B</div>
+                <div class="d-pad-top" onclick="audio.play()">X</div>
+                <div class="d-pad-left" onclick="audio.play()">Y</div>
+                <div class="d-pad-right" onclick="audio.play()">A</div>
+                <div class="d-pad-bottom" onclick="audio.play()">B</div>
             </div>
             <div class="d-pad-2-container">
-                <div class="d-pad-2-vertical"></div>
-                <div class="d-pad-2-horizontal"></div>
+                <div class="d-pad-2-vertical" onclick="audio.play()"></div>
+                <div class="d-pad-2-horizontal" onclick="audio.play()"></div>
             </div>
         </div>
         <div class="screen-outer">
@@ -53,11 +62,14 @@
                 <div class="screen-content">
                     <div class="mt-3 container file-upload">
                         <div class="image-upload-wrap content"> <!-- 이미지 업로드 공간 -->
-                            <input class="file-upload-input" type="file" onchange="readURL(this);" accept="image/*"/>
+                            <form id="uploadForm">
+                                <input class="file-upload-input" id="file-input" type="file"
+                                       onchange="readURL(this);" accept="image/*"/>
+                            </form>
                             <img class="file-upload-image" id="face-image" src="#" alt="your image">
                             <div class="drag-text">
-                                <img class="mt-5 pt-5 upload" src="https://i.imgur.com/MV0tjmd.png" />
-                                <img class="mt-5 pt-5 upload" src="https://i.imgur.com/twN5b08.png" />
+                                <img class="mt-5 pt-5 upload" src="https://i.imgur.com/MV0tjmd.png"/>
+                                <img class="mt-5 pt-5 upload" src="https://i.imgur.com/twN5b08.png"/>
                                 <h3 class="mb-5 pb-5 pt-4  upload-text">Upload<br>your<br>photo</h3>
                             </div>
                         </div>
@@ -65,7 +77,7 @@
                             <div id="loading" class="animated bounce">
                                 <div class="spinner-border" role="status">
                                     <span class="sr-only">Loading...</span>
-                                </div><p></p>
+                                </div>
                                 <p class="text-center">AI가 당신의 포켓몬상을 분석중입니다.</p>
                             </div>
                             <img class="result-image" style="" src="">
@@ -82,7 +94,20 @@
             </div>
         </div>
     </div>
+    <div id="makers-name">
+        <h3>AKBARI Members</h3>
+        <p>김지용<br>김훈희<br>남효정<br>최양임<br>한태영</p>
+    </div>
+    <video muted autoplay loop id="final-video">
+        <source src="https://i.gifer.com/UdMo.mp4" type="video/mp4">
+        <strong>Your browser does not support the video tag.</strong>
+    </video>
 </div>
+<script>
+    function muted() {
+        document.getElementById("bgm").muted = true;
+    }
+</script>
 <script>document.body.classList.add("reveal");</script>
 <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 

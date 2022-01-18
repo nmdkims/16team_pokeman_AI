@@ -36,7 +36,7 @@ class Effect{
     constructor(canvasWidth, canvasHeight){
         this.canvasWidth = canvasWidth;
         this.canvasHeight = canvasHeight ;
-        this.fontSize = 25;
+        this.fontSize = 15;
         this.columns = this.canvasWidth / this.fontSize;
         this.symbols = [];
         this.#initialize();
@@ -63,7 +63,7 @@ function animate(timeStamp) {
         ctx.textAlign = 'center';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = gradient;
-        ctx.font = effect.fontSize + 'px monospace';
+        ctx.font = effect.fontSize + 'DungGeunMo';
         effect.symbols.forEach(symbol => symbol.draw(ctx));
         timer = 0;
     } else {
