@@ -472,6 +472,10 @@ body.hidden {
     text-align: center;
     margin-top: 80px;
 }
+/*팀 피그마, 일정표, 깃헙주소, 시연영상 등*/
+.bottom_introduction {
+    display: none;
+}
 
 /* 가로 600px 이하: 깜찍한 스위치가 나타납니다! */
 @media all and (max-width: 600px) {
@@ -568,7 +572,23 @@ body.hidden {
         margin: 15px auto 0;
         max-width: 90%;
     }
+/*팀 피그마, 일정표, 깃헙주소, 시연영상 등*/
+    .bottom_introduction {
+        width: 375px;
+        font-size: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 40px auto;
+        margin-left: -65px;
+        text-align: center;
+    }
+    .bottom_introduction > a {
+        color: black;
+    }
 }
+
+
 
 
 /* 머신러닝 결과(1): 그래프 */
@@ -938,3 +958,4 @@ label {
     border-radius: 30px;
     position: relative;
 }
+
