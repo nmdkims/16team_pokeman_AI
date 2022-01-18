@@ -16,6 +16,7 @@ class Symbol {
         this.x = x;
         this.y = y;
         this.fontSize = fontSize;
+        this.fontfamily = 'Tokyo Knights';
         this.text = '';
         this.canvasHeight = canvasHeight;
     }
